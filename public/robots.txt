@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.mortgagecalc-free.com/sitemap.xml
+Sitemap: https://www.calctools-free.com/sitemap.xml

@@ -1,39 +1,8 @@
 import React, { useState, useMemo } from 'react';
 import { useLanguage } from '../LanguageContext';
+import { CURRENCIES, formatCurrency, calcMonthlyPayment } from '../utils/finance';
 
-const CURRENCIES = [
-  { code: 'USD', symbol: '$', locale: 'en-US' },
-  { code: 'JPY', symbol: '¥', locale: 'ja-JP' },
-  { code: 'VND', symbol: '₫', locale: 'vi-VN' },
-  { code: 'EUR', symbol: '€', locale: 'en-IE' },
-  { code: 'GBP', symbol: '£', locale: 'en-GB' },
-  { code: 'IDR', symbol: 'Rp', locale: 'id-ID' },
-  { code: 'CNY', symbol: '¥', locale: 'zh-CN' },
-];
-
-function formatCurrency(value, currencyCode, locale) {
-  if (!isFinite(value)) return '—';
-  try {
-    return new Intl.NumberFormat(locale, {
-      style: 'currency',
-      currency: currencyCode,
-      maximumFractionDigits: currencyCode === 'JPY' || currencyCode === 'VND' || currencyCode === 'IDR' ? 0 : 2,
-    }).format(value);
-  } catch {
-    return value.toFixed(2);
-  }
-}
-
-function calcMonthlyPayment(principal, annualRatePct, years) {
-  const r = annualRatePct / 100 / 12;
-  const n = years * 12;
-  if (principal <= 0 || n <= 0) return 0;
-  if (r === 0) return principal / n;
-  // Standard PMT formula: P * r / (1 - (1+r)^-n)
-  return principal * r / (1 - Math.pow(1 + r, -n));
-}
-
-function PaymentMode() {
+function MortgageMode() {
   const { t } = useLanguage();
   const [principal, setPrincipal] = useState('300000');
   const [rate, setRate] = useState('6.5');
@@ -56,9 +25,9 @@ function PaymentMode() {
     <div>
       <form className="calc-form" onSubmit={(e) => e.preventDefault()}>
         <div className="calc-field">
-          <label htmlFor="principal">{t('payment.fieldPrincipal')}</label>
+          <label htmlFor="m-principal">{t('mortgage.fieldPrincipal')}</label>
           <input
-            id="principal"
+            id="m-principal"
             type="number"
             inputMode="decimal"
             min="0"
@@ -69,9 +38,9 @@ function PaymentMode() {
         </div>
 
         <div className="calc-field">
-          <label htmlFor="rate">{t('payment.fieldRate')}</label>
+          <label htmlFor="m-rate">{t('mortgage.fieldRate')}</label>
           <input
-            id="rate"
+            id="m-rate"
             type="number"
             inputMode="decimal"
             min="0"
@@ -83,9 +52,9 @@ function PaymentMode() {
         </div>
 
         <div className="calc-field">
-          <label htmlFor="years">{t('payment.fieldTerm')}</label>
+          <label htmlFor="m-years">{t('mortgage.fieldTerm')}</label>
           <input
-            id="years"
+            id="m-years"
             type="number"
             inputMode="numeric"
             min="1"
@@ -97,9 +66,9 @@ function PaymentMode() {
         </div>
 
         <div className="calc-field">
-          <label htmlFor="currency">{t('payment.fieldCurrency')}</label>
+          <label htmlFor="m-currency">{t('mortgage.fieldCurrency')}</label>
           <select
-            id="currency"
+            id="m-currency"
             value={currency}
             onChange={(e) => setCurrency(e.target.value)}
           >
@@ -112,7 +81,7 @@ function PaymentMode() {
 
       <div className="calc-result" data-reveal>
         <div className="calc-result-primary">
-          <span className="label">{t('payment.resultLabel')}</span>
+          <span className="label">{t('mortgage.resultLabel')}</span>
           <span className="value">
             <em>{formatCurrency(result.monthly, cur.code, cur.locale)}</em>
           </span>
@@ -120,15 +89,15 @@ function PaymentMode() {
 
         <div className="calc-result-grid">
           <div className="item">
-            <span className="label">{t('payment.totalInterest')}</span>
+            <span className="label">{t('mortgage.totalInterest')}</span>
             <span className="value">{formatCurrency(result.totalInterest, cur.code, cur.locale)}</span>
           </div>
           <div className="item">
-            <span className="label">{t('payment.totalCost')}</span>
+            <span className="label">{t('mortgage.totalCost')}</span>
             <span className="value">{formatCurrency(result.totalCost, cur.code, cur.locale)}</span>
           </div>
           <div className="item">
-            <span className="label">{t('payment.payoffDate')}</span>
+            <span className="label">{t('mortgage.payoffDate')}</span>
             <span className="value tabular">{result.months}</span>
           </div>
         </div>
@@ -139,11 +108,11 @@ function PaymentMode() {
           fontStyle: 'italic', lineHeight: 1.6,
           fontFamily: 'var(--font-serif)'
         }}>
-          {t('payment.assumptions')}
+          {t('mortgage.assumptions')}
         </p>
       </div>
     </div>
   );
 }
 
-export default PaymentMode;
+export default MortgageMode;

@@ -16,7 +16,7 @@ function PrivacyPolicy() {
 
         <article className="prose" data-reveal style={{ marginTop: '2rem' }}>
           <p>
-            Mortgage Calc is built around a single principle: the numbers you enter never leave your
+            Calc Tools is built around a single principle: the numbers you enter never leave your
             device. This page describes what we do and do not collect.
           </p>
 
@@ -51,7 +51,7 @@ function PrivacyPolicy() {
 
           <h2>Children</h2>
           <p>
-            Mortgage Calc is not directed at children under 13. We do not knowingly collect any data
+            Calc Tools is not directed at children under 13. We do not knowingly collect any data
             that could identify a child.
           </p>
 

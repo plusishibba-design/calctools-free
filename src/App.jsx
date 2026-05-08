@@ -9,7 +9,9 @@ const TermsOfService = lazy(() => import('./components/TermsOfService'));
 const ContactPage = lazy(() => import('./components/ContactPage'));
 const AboutPage = lazy(() => import('./components/AboutPage'));
 
-const PaymentMode = lazy(() => import('./components/PaymentMode'));
+const MortgageMode = lazy(() => import('./components/MortgageMode'));
+const LoanMode = lazy(() => import('./components/LoanMode'));
+const CompoundMode = lazy(() => import('./components/CompoundMode'));
 
 const LANGS = [
   { code: 'en', label: 'English' },
@@ -20,12 +22,14 @@ const LANGS = [
 ];
 
 const TABS = [
-  { key: 'payment', labelKey: 'tabs.payment', i18nKey: 'payment' },
-  // Future: refinance, affordability, amortization, extra, biweekly
+  { key: 'mortgage', labelKey: 'tabs.mortgage', i18nKey: 'mortgage', category: 'finance' },
+  { key: 'loan', labelKey: 'tabs.loan', i18nKey: 'loan', category: 'finance' },
+  { key: 'compound', labelKey: 'tabs.compound', i18nKey: 'compound', category: 'finance' },
+  // Future categories: health (BMI/Body fat), date (age/diff), math (percent/tip)
 ];
 
 function AppInner() {
-  const [activeTab, setActiveTab] = useState('payment');
+  const [activeTab, setActiveTab] = useState('mortgage');
   const [page, setPage] = useState(null);
   const [pathname, setPathname] = useState(() => (typeof window !== 'undefined' ? window.location.pathname : '/'));
   const { t, lang, setLang } = useLanguage();
@@ -36,9 +40,9 @@ function AppInner() {
 
   function getRouteFromPath() {
     const path = window.location.pathname.replace(/^\//, '');
-    if (validPages.includes(path)) return { page: path, tab: 'payment' };
+    if (validPages.includes(path)) return { page: path, tab: 'mortgage' };
     if (validTabs.includes(path)) return { page: null, tab: path };
-    return { page: null, tab: 'payment' };
+    return { page: null, tab: 'mortgage' };
   }
 
   useEffect(() => {
@@ -101,15 +105,17 @@ function AppInner() {
   const goHome = () => {
     window.history.pushState(null, '', '/');
     setPage(null);
-    setActiveTab('payment');
+    setActiveTab('mortgage');
     setPathname('/');
     updateCanonical();
   };
 
   const renderContent = () => {
     switch (activeTab) {
-      case 'payment': return <PaymentMode />;
-      default: return <PaymentMode />;
+      case 'mortgage': return <MortgageMode />;
+      case 'loan': return <LoanMode />;
+      case 'compound': return <CompoundMode />;
+      default: return <MortgageMode />;
     }
   };
 
@@ -129,7 +135,7 @@ function AppInner() {
       <header className="app-header">
         <div className="app-brand">
           <h1 onClick={goHome}>
-            Mortgage <em>Calc</em>
+            Calc <em>Tools</em>
           </h1>
           <p className="app-tagline">{t('app.subtitle')}</p>
         </div>
@@ -190,7 +196,7 @@ function AppInner() {
               <>
                 {i18nKey && (
                   <div className="tool-page-header" data-reveal>
-                    <p className="eyebrow">{`MORTGAGE CALC — ${t(currentTab.labelKey).toUpperCase()}`}</p>
+                    <p className="eyebrow">{`CALC TOOLS — ${t(currentTab.labelKey).toUpperCase()}`}</p>
                     <h2>{t(`${i18nKey}.title`)}</h2>
                     <p>{t(`${i18nKey}.seoDesc`)}</p>
                   </div>

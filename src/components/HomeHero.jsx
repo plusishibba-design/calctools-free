@@ -2,13 +2,9 @@ import React from 'react';
 import { useLanguage } from '../LanguageContext';
 
 const TOOLS = [
-  { key: 'payment', nameKey: 'tabs.payment', descKey: 'about.toolPayment' },
-  // Future tools — uncomment as implemented:
-  // { key: 'refinance', nameKey: 'tabs.refinance', descKey: 'about.toolRefinance' },
-  // { key: 'affordability', nameKey: 'tabs.affordability', descKey: 'about.toolAffordability' },
-  // { key: 'amortization', nameKey: 'tabs.amortization', descKey: 'about.toolAmortization' },
-  // { key: 'extra', nameKey: 'tabs.extra', descKey: 'about.toolExtra' },
-  // { key: 'biweekly', nameKey: 'tabs.biweekly', descKey: 'about.toolBiweekly' },
+  { key: 'mortgage', nameKey: 'tabs.mortgage', descKey: 'about.toolMortgage' },
+  { key: 'loan', nameKey: 'tabs.loan', descKey: 'about.toolLoan' },
+  { key: 'compound', nameKey: 'tabs.compound', descKey: 'about.toolCompound' },
 ];
 
 const STRENGTHS = [
@@ -25,7 +21,7 @@ function HomeHero({ onToolSelect, onAboutClick }) {
       <p className="meta-stamp" style={{ marginBottom: '1.5rem' }} data-reveal>
         <span>STUDIO T. ISHI</span>
         <span className="sep">·</span>
-        <span>MORTGAGE CALC</span>
+        <span>CALC TOOLS</span>
         <span className="sep">·</span>
         <span>SAIGON</span>
       </p>
@@ -40,7 +36,7 @@ function HomeHero({ onToolSelect, onAboutClick }) {
           </h2>
           <p className="editorial-lede">{t('home.lede')}</p>
           <div className="home-cta">
-            <button className="cta-primary" onClick={() => onToolSelect('payment')}>
+            <button className="cta-primary" onClick={() => onToolSelect('mortgage')}>
               {t('home.startCta')}
             </button>
             <button className="cta-ghost" onClick={onAboutClick}>
@@ -50,6 +46,15 @@ function HomeHero({ onToolSelect, onAboutClick }) {
         </div>
 
         <div className="home-hero-grid" data-reveal>
+          {/* Category header — Finance */}
+          <p className="eyebrow" style={{ marginBottom: '0.5rem' }}>{t('home.categoryFinance')}</p>
+          <p style={{
+            fontFamily: 'var(--font-serif)', fontStyle: 'italic',
+            fontSize: '0.95rem', color: 'var(--color-ink-soft)',
+            marginBottom: '1rem', maxWidth: '40ch'
+          }}>
+            {t('home.categoryFinanceBody')}
+          </p>
           <div className="tool-grid">
             {TOOLS.map((tool, i) => (
               <button

@@ -3,7 +3,7 @@ import { useLanguage } from '../LanguageContext';
 import EditorialOrnament from './EditorialOrnament';
 
 const EMAIL = 'aamujou1@gmail.com';
-const SITE_PREFIX = '[Mortgage Calc]';
+const SITE_PREFIX = '[Calc Tools]';
 
 const CATEGORIES = [
   {
@@ -18,7 +18,7 @@ const CATEGORIES = [
     descKey: 'contact.cat2Body',
     subject: `${SITE_PREFIX} Bug Report`,
     body:
-      'Calculator: \nBrowser / OS: \n\nInputs:\n- Loan: \n- Rate: \n- Term: \n\nSteps to reproduce:\n1. \n2. \n3. \n\nExpected: \nActual: ',
+      'Calculator: \nBrowser / OS: \n\nInputs:\n- (list values you entered)\n\nSteps to reproduce:\n1. \n2. \n3. \n\nExpected: \nActual: ',
   },
   {
     titleKey: 'contact.cat3Title',

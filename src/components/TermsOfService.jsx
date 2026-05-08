@@ -16,13 +16,13 @@ function TermsOfService() {
 
         <article className="prose" data-reveal style={{ marginTop: '2rem' }}>
           <p>
-            Welcome to Mortgage Calc. By using this website, you agree to the terms below. If you
+            Welcome to Calc Tools. By using this website, you agree to the terms below. If you
             do not agree, please do not use the site.
           </p>
 
           <h2>Not financial advice</h2>
           <p>
-            Mortgage Calc provides mathematical calculation tools. The output is not financial,
+            Calc Tools provides mathematical calculation tools. The output is not financial,
             legal, tax, or investment advice. Before making any decision involving a mortgage, you
             should consult a licensed mortgage broker, financial advisor, tax professional, or
             attorney qualified in your jurisdiction.
