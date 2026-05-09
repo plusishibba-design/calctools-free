@@ -43,7 +43,9 @@ function AboutPage() {
             </h1>
             <p className="editorial-lede">{t('about.lede')}</p>
           </div>
-          {/* Hero figure placeholder — image to be generated and placed at /images/about-hero.png */}
+          <figure className="about-hero-figure">
+            <img src="/images/about-hero.png" alt="" loading="lazy" />
+          </figure>
         </div>
         <EditorialOrnament />
 
