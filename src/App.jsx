@@ -178,6 +178,7 @@ function AppInner() {
       <header className="app-header">
         <div className="app-brand">
           <h1 onClick={goHome}>
+            <img src="/images/studio-mark.png" alt="" className="brand-mark" loading="lazy" />
             Calc <em>Tools</em>
           </h1>
           <p className="app-tagline">{t('app.subtitle')}</p>
