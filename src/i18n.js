@@ -240,9 +240,13 @@ const translations = {
     'amortization.totalInterest': 'Total interest',
     'amortization.totalPayments': 'Total payments',
     'amortization.scheduleTitle': 'III — Schedule',
+    'amortization.viewYearly': 'Yearly',
+    'amortization.viewMonthly': 'Monthly',
+    'amortization.colYear': 'Year',
     'amortization.colPrincipal': 'Principal',
     'amortization.colInterest': 'Interest',
     'amortization.colBalance': 'Balance',
+    'amortization.yearlyNote': 'Showing annual totals. Switch to "Monthly" for the full month-by-month breakdown.',
 
     // Extra Payment
     'extra.title': 'Extra Payment Calculator',
@@ -547,10 +551,14 @@ const translations = {
     'amortization.monthlyPayment': '月額返済',
     'amortization.totalInterest': '総利息',
     'amortization.totalPayments': '返済回数',
-    'amortization.scheduleTitle': 'III — 月次内訳',
+    'amortization.scheduleTitle': 'III — 償還スケジュール',
+    'amortization.viewYearly': '年次',
+    'amortization.viewMonthly': '月次',
+    'amortization.colYear': '年',
     'amortization.colPrincipal': '元金',
     'amortization.colInterest': '利息',
     'amortization.colBalance': '残高',
+    'amortization.yearlyNote': '年次合計を表示中。月別の詳細は「月次」に切替えてください。',
 
     // Extra
     'extra.title': '繰上返済計算機',
