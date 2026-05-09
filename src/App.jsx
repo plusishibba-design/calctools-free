@@ -80,21 +80,43 @@ function AppInner() {
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Reveal-on-scroll observer (Studio T. Ishi signature)
+  // Uses MutationObserver to also catch elements added by lazy-loaded routes.
   useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
+    const intersectionObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add('is-visible');
-          observer.unobserve(entry.target);
+          intersectionObserver.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.1 });
+    }, { threshold: 0.1, rootMargin: '0px 0px -10% 0px' });
 
-    const targets = document.querySelectorAll('[data-reveal]:not(.is-visible)');
-    targets.forEach((el) => observer.observe(el));
+    const observeAll = () => {
+      document
+        .querySelectorAll('[data-reveal]:not(.is-visible)')
+        .forEach((el) => intersectionObserver.observe(el));
+    };
 
-    return () => observer.disconnect();
-  }, [page, activeTab, pathname]);
+    // Initial pass
+    observeAll();
+
+    // Watch for new data-reveal elements added by Suspense / lazy components
+    const mutationObserver = new MutationObserver(() => observeAll());
+    mutationObserver.observe(document.body, { childList: true, subtree: true });
+
+    // Safety net: ensure anything still hidden after 1.5s becomes visible
+    const safety = setTimeout(() => {
+      document
+        .querySelectorAll('[data-reveal]:not(.is-visible)')
+        .forEach((el) => el.classList.add('is-visible'));
+    }, 1500);
+
+    return () => {
+      intersectionObserver.disconnect();
+      mutationObserver.disconnect();
+      clearTimeout(safety);
+    };
+  }, []);
 
   const isHomePath = pathname === '/' && page === null;
 
