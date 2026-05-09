@@ -311,4 +311,725 @@ export const TOOL_SEO_DATA = {
       },
     ],
   },
+
+  refinance: {
+    useCases: [
+      {
+        title: {
+          en: 'Comparing offers after rates drop',
+          ja: '金利低下後のオファー比較',
+          vi: 'So sánh ưu đãi sau khi lãi suất giảm',
+          id: 'Membandingkan penawaran setelah suku bunga turun',
+          zh: '利率下降后比较再融资方案',
+        },
+        body: {
+          en: 'When market rates fall a percentage point or more, refinancing can save thousands. Plug in your current balance, current rate, and the offered new rate to see if break-even sits comfortably before you plan to move or refinance again.',
+          ja: '市場金利が1%以上下がった時、借換で数十万〜数百万円節約できることがあります。現行残高・現行金利・新オファー金利を入れて、引っ越しや再借換予定より早く損益分岐するかを確認してください。',
+          vi: 'Khi lãi suất thị trường giảm 1% trở lên, tái cấp vốn có thể tiết kiệm hàng nghìn. Nhập dư nợ, lãi suất hiện tại và lãi suất mới để xem điểm hòa vốn có sớm hơn kế hoạch chuyển nhà.',
+          id: 'Ketika suku bunga pasar turun 1% atau lebih, refinancing bisa menghemat ribuan. Masukkan saldo, suku bunga saat ini, dan suku bunga baru untuk melihat titik impas.',
+          zh: '当市场利率下降一个百分点以上时，再融资可省下数千元。输入余额、当前利率与新利率，看损益分歧点是否早于你计划搬家或再融资的时间。',
+        },
+      },
+      {
+        title: {
+          en: 'Switching from 30-year to 15-year',
+          ja: '30年から15年への借換',
+          vi: 'Chuyển từ 30 năm sang 15 năm',
+          id: 'Beralih dari 30 tahun ke 15 tahun',
+          zh: '从 30 年换成 15 年',
+        },
+        body: {
+          en: 'Shorter terms come with lower rates and dramatically less lifetime interest, but higher monthly payments. Run the calculator with your current loan against a 15-year refinance to see whether the new monthly fits your budget.',
+          ja: '期間短縮型借換は金利も低く、生涯利息が劇的に減りますが、月額は上がります。現行ローンと15年借換を比較し、新月額が家計に収まるか確認してください。',
+          vi: 'Thời hạn ngắn hơn đi kèm lãi suất thấp hơn và tổng lãi giảm đáng kể, nhưng khoản trả hàng tháng cao hơn. Tính toán để xem liệu khoản trả mới có phù hợp ngân sách.',
+          id: 'Tenor lebih pendek datang dengan suku bunga lebih rendah dan total bunga jauh lebih sedikit, tapi cicilan bulanan lebih tinggi. Hitung untuk melihat apakah cicilan baru cocok dengan anggaran.',
+          zh: '更短期限通常利率更低、总利息显著减少，但月供更高。把当前贷款与 15 年再融资对比，看新月供是否在预算内。',
+        },
+      },
+      {
+        title: {
+          en: 'Cash-out refinance evaluation',
+          ja: 'キャッシュアウト借換の評価',
+          vi: 'Đánh giá tái cấp vốn rút tiền mặt',
+          id: 'Mengevaluasi refinancing cash-out',
+          zh: '评估套现再融资',
+        },
+        body: {
+          en: 'Pulling equity for renovations or debt consolidation effectively rolls those costs into your mortgage at the new rate. Run the calculator on the higher new balance to see whether the spread between your old rate and new rate justifies the larger loan.',
+          ja: 'リフォームや債務統合のために自宅エクイティを引き出す場合、それらが新金利でローンに組み込まれます。増額後の新残高で計算し、旧金利と新金利の差が拡大ローンを正当化できるか確認してください。',
+          vi: 'Rút vốn cho cải tạo hoặc gộp nợ thực chất chuyển các chi phí đó vào khoản vay với lãi suất mới. Tính trên dư nợ mới cao hơn để xem chênh lệch lãi suất có biện minh cho khoản vay lớn hơn.',
+          id: 'Mengambil ekuitas untuk renovasi atau konsolidasi utang menggulung biaya itu ke hipotek dengan suku bunga baru. Hitung pada saldo baru yang lebih tinggi untuk melihat apakah selisih suku bunga membenarkan pinjaman lebih besar.',
+          zh: '为装修或债务整合套现，相当于把这些费用以新利率并入贷款。用增加后的新余额计算，看新旧利率差是否值得扩大贷款。',
+        },
+      },
+    ],
+    faqs: [
+      {
+        q: {
+          en: 'When does refinancing actually pay off?',
+          ja: '借換は実際いつ得するのですか？',
+          vi: 'Khi nào tái cấp vốn thực sự có lời?',
+          id: 'Kapan refinancing benar-benar menguntungkan?',
+          zh: '什么时候再融资真的划算？',
+        },
+        a: {
+          en: 'When the break-even month sits well before you plan to sell or refinance again. A common rule of thumb is "rate drop ≥ 0.75%" plus "remaining ownership ≥ break-even × 1.5", but the calculator gives you the exact numbers for your situation.',
+          ja: '損益分岐月が、売却や再借換予定の時期より十分前に来る時です。「金利低下 ≥ 0.75%」「残居住期間 ≥ 損益分岐月 × 1.5」が経験則ですが、この計算機はあなたの状況の正確な数字を出します。',
+          vi: 'Khi tháng hòa vốn nằm rõ trước khi bạn bán hoặc tái cấp vốn lại. Quy tắc kinh nghiệm: "lãi suất giảm ≥ 0,75%" và "thời gian còn lại ≥ hòa vốn × 1,5".',
+          id: 'Ketika titik impas jatuh jauh sebelum Anda berencana menjual atau refinancing lagi. Aturan praktis: "penurunan suku bunga ≥ 0,75%" dan "kepemilikan tersisa ≥ titik impas × 1,5".',
+          zh: '当损益分歧点远早于你打算卖房或再融资的时间。经验法则："利率下降 ≥ 0.75%" 且 "剩余持有时间 ≥ 损益分歧 × 1.5"。',
+        },
+      },
+      {
+        q: {
+          en: 'Are closing costs always paid up-front?',
+          ja: '諸費用は常に前払いですか？',
+          vi: 'Phí đóng giao dịch có luôn trả trước không?',
+          id: 'Apakah closing costs selalu dibayar di muka?',
+          zh: '过户费用必须前期一次付清吗？',
+        },
+        a: {
+          en: 'Often yes, but "no-cost" refinances roll fees into the principal at a slightly higher rate. The calculator assumes up-front payment; for rolled-in fees, add the fee amount to the new loan balance and use the higher offered rate.',
+          ja: 'たいていは前払いですが、「諸費用ゼロ」借換は手数料を元金に組み込み、金利を少し上げます。この計算機は前払い前提なので、組み込み型は手数料を新残高に加え、提示された高い金利を使ってください。',
+          vi: 'Thường có, nhưng tái cấp vốn "không phí" cuộn phí vào gốc với lãi suất hơi cao hơn. Máy tính giả định trả trước.',
+          id: 'Sering, tapi refinancing "tanpa biaya" menggulung biaya ke pokok dengan suku bunga sedikit lebih tinggi. Kalkulator mengasumsikan pembayaran di muka.',
+          zh: '通常是预付，但"零费用"再融资把费用并入本金并稍微提高利率。本计算器假设前期预付。',
+        },
+      },
+      {
+        q: {
+          en: 'Does this account for tax-deductibility of mortgage interest?',
+          ja: '住宅ローン利息の控除は考慮されますか？',
+          vi: 'Có tính đến khả năng khấu trừ thuế của lãi vay không?',
+          id: 'Apakah ini memperhitungkan pengurangan pajak bunga hipotek?',
+          zh: '是否考虑房贷利息的税收抵扣？',
+        },
+        a: {
+          en: 'No. Tax treatment varies by country (US itemized deduction, JP 住宅ローン控除, etc.) and by your individual situation. The lifetime savings figure is pre-tax — your after-tax savings will be smaller in jurisdictions where mortgage interest is deductible.',
+          ja: 'いいえ。税制は国により異なり（米国の項目別控除、日本の住宅ローン控除等）、個人状況にも依存します。生涯削減は税引前なので、利息控除がある国では税引後削減はもっと小さくなります。',
+          vi: 'Không. Xử lý thuế khác nhau theo quốc gia. Khoản tiết kiệm trọn đời là trước thuế — tiết kiệm sau thuế sẽ nhỏ hơn ở nơi lãi vay được khấu trừ.',
+          id: 'Tidak. Perlakuan pajak bervariasi per negara. Penghematan seumur hidup adalah sebelum pajak — penghematan setelah pajak akan lebih kecil di yurisdiksi dengan pengurangan bunga hipotek.',
+          zh: '不考虑。各国税制不同。终身节省是税前数字——在按揭利息可抵扣的地区，税后节省会更小。',
+        },
+      },
+    ],
+  },
+
+  affordability: {
+    useCases: [
+      {
+        title: {
+          en: 'Setting a target before house hunting',
+          ja: '物件探しの前に目標価格を決める',
+          vi: 'Đặt mục tiêu trước khi đi xem nhà',
+          id: 'Menetapkan target sebelum berburu rumah',
+          zh: '看房前先定目标价位',
+        },
+        body: {
+          en: 'Filtering listings is much faster when you know your ceiling. Enter your gross income, monthly debts, and expected down payment to get a defensible upper bound that lenders will broadly agree with.',
+          ja: '上限が分かっていれば物件絞り込みが圧倒的に速くなります。年収・月次債務・想定頭金を入れて、銀行の同意も得やすい合理的な上限を出してください。',
+          vi: 'Lọc tin rao bán nhanh hơn nhiều khi biết trần. Nhập thu nhập gộp, nợ hàng tháng và tiền đặt cọc dự kiến để có giới hạn trên được ngân hàng đồng ý rộng rãi.',
+          id: 'Memfilter listing jauh lebih cepat ketika Anda tahu plafon. Masukkan pendapatan kotor, utang bulanan, dan uang muka yang diharapkan.',
+          zh: '设定上限后筛选房源会快得多。输入税前收入、月负债和预期首付，得出银行普遍认可的合理上限。',
+        },
+      },
+      {
+        title: {
+          en: 'Stress-testing for higher rates',
+          ja: '金利上昇への耐性テスト',
+          vi: 'Kiểm tra rủi ro với lãi suất cao hơn',
+          id: 'Uji ketahanan terhadap suku bunga lebih tinggi',
+          zh: '抗利率上升压力测试',
+        },
+        body: {
+          en: 'A house you can "afford" at 6% may be uncomfortable at 7%. Run the calculator at today\'s rate and again 1% higher to make sure you have a real buffer if rates move before you close.',
+          ja: '金利6%で「買える」家も7%だと家計が苦しくなり得ます。今日の金利と+1%の2パターンで計算し、契約前に金利が動いた場合の本当の余力を確認してください。',
+          vi: 'Ngôi nhà bạn "có khả năng" mua ở 6% có thể không thoải mái ở 7%. Tính ở lãi suất hôm nay rồi cao hơn 1% để có khoảng đệm thật.',
+          id: 'Rumah yang "mampu" Anda beli di 6% bisa jadi tidak nyaman di 7%. Hitung di suku bunga saat ini dan 1% lebih tinggi untuk memastikan Anda punya margin nyata.',
+          zh: '在 6% 时"买得起"的房子，到 7% 可能就吃力了。用当前利率和高 1% 的利率分别算，确保有真正的缓冲。',
+        },
+      },
+      {
+        title: {
+          en: 'Down payment vs price tradeoff',
+          ja: '頭金と価格のトレードオフ',
+          vi: 'Đánh đổi giữa đặt cọc và giá',
+          id: 'Trade-off antara uang muka dan harga',
+          zh: '首付与房价的权衡',
+        },
+        body: {
+          en: 'Increasing your down payment by $20k might let you afford a $30k–$40k more expensive home (because both the loan and PMI shrink). Adjust the down payment slider to find the sweet spot.',
+          ja: '頭金を200万円増やすと、PMI と借入額が両方下がり、300〜400万円高い物件が買えるようになることがあります。頭金を調整してスイートスポットを探してください。',
+          vi: 'Tăng tiền đặt cọc 20k$ có thể giúp bạn mua được nhà đắt hơn 30-40k$ (vì cả khoản vay lẫn PMI giảm). Điều chỉnh để tìm điểm tối ưu.',
+          id: 'Meningkatkan uang muka $20k mungkin memungkinkan Anda mampu rumah $30-40k lebih mahal (karena pinjaman dan PMI menyusut). Sesuaikan untuk menemukan titik manis.',
+          zh: '增加 2 万元首付可能让你买得起贵 3-4 万元的房子（贷款和 PMI 都会减少）。调整首付找最佳平衡点。',
+        },
+      },
+    ],
+    faqs: [
+      {
+        q: {
+          en: 'What are the 28/36 ratios?',
+          ja: '28/36 ルールとは？',
+          vi: 'Tỷ lệ 28/36 là gì?',
+          id: 'Apa itu rasio 28/36?',
+          zh: '28/36 是什么？',
+        },
+        a: {
+          en: 'Front-end (28%): your monthly housing payment (PITI) shouldn\'t exceed 28% of gross monthly income. Back-end (36%): housing + all other monthly debt shouldn\'t exceed 36%. They\'re US conventional-loan guidelines and approximate well in many other markets.',
+          ja: 'フロントエンド (28%): 月の住居費 (PITI) が月収（額面）の28%を超えないこと。バックエンド (36%): 住居費＋その他全ての月次債務が36%を超えないこと。米国の通常ローン基準ですが、多くの市場で近似的に有効です。',
+          vi: 'Front-end (28%): khoản trả nhà hàng tháng (PITI) không vượt quá 28% thu nhập gộp. Back-end (36%): nhà + tất cả nợ hàng tháng không vượt 36%.',
+          id: 'Front-end (28%): cicilan rumah bulanan (PITI) tidak boleh melebihi 28% pendapatan kotor. Back-end (36%): rumah + semua utang bulanan tidak melebihi 36%.',
+          zh: '前端 (28%)：月供（PITI）不超过税前月收入的 28%。后端 (36%)：月供+所有月度债务不超过 36%。这是美国常规贷款标准，许多市场可类比使用。',
+        },
+      },
+      {
+        q: {
+          en: 'Why "front-end" vs "back-end"?',
+          ja: 'なぜ「フロント」と「バック」の2つなのですか？',
+          vi: 'Tại sao có hai tỷ lệ riêng?',
+          id: 'Mengapa ada dua rasio terpisah?',
+          zh: '为什么前后端要分开？',
+        },
+        a: {
+          en: 'Two thresholds catch two failure modes. A high housing-only ratio means a temporary income drop hits hard. A high total-debt ratio means car payments or student loans are crowding out housing. Lenders use the more constraining of the two.',
+          ja: '2閾値で2種類の失敗を捕捉します。住居費比率だけが高いと一時的な収入減で苦しくなる。総債務比率が高いと自動車ローンや学費が住居費を圧迫している。銀行はより厳しい方を使います。',
+          vi: 'Hai ngưỡng bắt hai chế độ thất bại. Tỷ lệ chỉ nhà cao có nghĩa là sốc thu nhập tạm thời rất đau. Tỷ lệ tổng nợ cao có nghĩa là xe hơi hoặc nợ học đang lấn át.',
+          id: 'Dua ambang menangkap dua mode gagal. Rasio rumah saja yang tinggi berarti penurunan pendapatan sementara sangat memukul. Rasio total utang tinggi berarti utang lain mendesak rumah.',
+          zh: '两个阈值各管一种风险。房贷占比过高 → 收入临时下滑会难承受。总债务占比过高 → 车贷或学贷正在挤压房贷空间。银行用更严的那一个。',
+        },
+      },
+      {
+        q: {
+          en: 'Do real lenders actually use these limits?',
+          ja: '実際の銀行はこの基準を使っていますか？',
+          vi: 'Ngân hàng thực sự dùng các giới hạn này?',
+          id: 'Apakah pemberi pinjaman nyata menggunakan batas ini?',
+          zh: '实际银行真用这些限额吗？',
+        },
+        a: {
+          en: 'Most US conventional loans use 28/36 as guidance. FHA, VA, and many international lenders allow stretching to 41-50% back-end with strong credit and reserves. The calculator gives a conservative target — your individual approval may be higher.',
+          ja: '米国の通常ローンの大半は 28/36 を目安にします。FHA、VA、多くの海外銀行は信用力と預金次第で 41-50% まで認めます。この計算機は保守的な目標で、実際の承認はもっと高いかもしれません。',
+          vi: 'Hầu hết khoản vay thông thường ở Mỹ dùng 28/36 làm hướng dẫn. FHA, VA và nhiều ngân hàng quốc tế cho phép kéo dài đến 41-50% back-end với tín dụng mạnh.',
+          id: 'Sebagian besar pinjaman konvensional AS menggunakan 28/36 sebagai panduan. FHA, VA, dan banyak pemberi pinjaman internasional mengizinkan hingga 41-50% back-end dengan kredit kuat.',
+          zh: '美国大多数常规贷款以 28/36 为参考。FHA、VA 以及许多国际贷方在信用良好时可放宽到后端 41-50%。本计算器给出保守目标。',
+        },
+      },
+    ],
+  },
+
+  amortization: {
+    useCases: [
+      {
+        title: {
+          en: 'Tax preparation: total interest paid in a year',
+          ja: '確定申告: 年間支払利息の集計',
+          vi: 'Khai thuế: tổng lãi đã trả trong năm',
+          id: 'Persiapan pajak: total bunga yang dibayar dalam setahun',
+          zh: '报税：算出某年总利息',
+        },
+        body: {
+          en: 'In countries where mortgage interest is deductible, you need the exact amount paid in a calendar year. Use the schedule to sum up monthly interest figures for any 12-month window — works as a sanity check against your lender\'s 1098 form.',
+          ja: '住宅ローン控除のある国では、暦年の正確な利息支払額が必要です。償還表で任意12ヶ月分の利息を合計して、銀行の年末残高証明書のチェックに使えます。',
+          vi: 'Ở các quốc gia mà lãi vay được khấu trừ, bạn cần số chính xác đã trả trong năm. Dùng lịch để tổng hợp lãi tháng cho bất kỳ cửa sổ 12 tháng nào.',
+          id: 'Di negara dengan pengurangan bunga hipotek, Anda perlu jumlah yang tepat dibayar dalam tahun kalender. Gunakan jadwal untuk menjumlahkan bunga bulanan.',
+          zh: '在按揭利息可抵扣的国家，需要某日历年准确金额。用还款表把任意 12 个月的利息相加——可与银行年终对账单互核。',
+        },
+      },
+      {
+        title: {
+          en: 'Seeing where you stand in year 5',
+          ja: '5年後の残高を可視化',
+          vi: 'Xem tình hình ở năm thứ 5',
+          id: 'Melihat posisi di tahun ke-5',
+          zh: '查看第 5 年时的余额',
+        },
+        body: {
+          en: 'Many people are shocked to see how little of the principal has been paid down by year 5 of a 30-year mortgage. Scroll the schedule to month 60 to see the remaining balance and recalibrate your refinance/sale timing accordingly.',
+          ja: '30年ローンの5年後にどれほど元金が減っていないか見て、多くの人が驚きます。償還表を60ヶ月までスクロールして残高を確認し、借換・売却のタイミングを再考してください。',
+          vi: 'Nhiều người sốc khi thấy bao nhiêu phần gốc đã được trả vào năm thứ 5 của khoản vay 30 năm. Cuộn đến tháng 60 để xem dư nợ.',
+          id: 'Banyak orang terkejut melihat betapa sedikit pokok yang dilunasi di tahun ke-5 dari hipotek 30 tahun. Gulir ke bulan 60 untuk melihat saldo tersisa.',
+          zh: '很多人惊讶地发现 30 年贷款到第 5 年本金还原得很少。把还款表滚动到第 60 个月，看看余额并据此重新规划再融资或卖房时机。',
+        },
+      },
+      {
+        title: {
+          en: 'Understanding why early payments are mostly interest',
+          ja: '初期返済が利息中心な理由を理解',
+          vi: 'Hiểu tại sao kỳ đầu chủ yếu là lãi',
+          id: 'Memahami mengapa pembayaran awal sebagian besar bunga',
+          zh: '理解为什么前期还款大部分是利息',
+        },
+        body: {
+          en: 'Looking at the schedule\'s first row makes the math intuitive: principal × rate = interest, and the rest is the principal payment. The interest column shrinks slowly month by month as the balance does. Seeing it in a table is more convincing than reading about it.',
+          ja: '償還表の1行目を見れば直感的: 元金 × 金利 = 利息、残りが元金返済。残高が減るにつれて利息列が緩やかに減ります。文章で読むより表で見るほうが納得感があります。',
+          vi: 'Nhìn dòng đầu tiên của lịch là trực quan: gốc × lãi suất = lãi, phần còn lại là trả gốc. Cột lãi giảm chậm khi dư nợ giảm.',
+          id: 'Melihat baris pertama jadwal membuat matematika intuitif: pokok × suku bunga = bunga, sisanya pembayaran pokok. Kolom bunga menyusut perlahan saat saldo turun.',
+          zh: '看还款表第一行就一目了然：本金 × 利率 = 利息，余下才是还本金。利息列随余额下降而缓慢缩小——比读文字更直观。',
+        },
+      },
+    ],
+    faqs: [
+      {
+        q: {
+          en: 'Why does the last payment look slightly different?',
+          ja: '最終返済額が少し違うのはなぜ？',
+          vi: 'Tại sao kỳ trả cuối khác một chút?',
+          id: 'Mengapa pembayaran terakhir terlihat sedikit berbeda?',
+          zh: '为什么最后一期金额略有不同？',
+        },
+        a: {
+          en: 'Rounding accumulates over hundreds of months. The schedule\'s final row balances the books exactly so the remaining balance is zero. Real lenders do the same — your last payment is usually a few cents (or yen) different from the standard PMT.',
+          ja: '丸め誤差が数百ヶ月で累積するため、最終行は残高を正確にゼロにするよう調整します。実際の銀行も同じで、最終返済は標準PMT額と数円〜数十円違うのが普通です。',
+          vi: 'Làm tròn tích lũy qua hàng trăm tháng. Hàng cuối cân bằng sổ sách chính xác để dư nợ về 0.',
+          id: 'Pembulatan menumpuk selama ratusan bulan. Baris terakhir menyeimbangkan pembukuan secara tepat sehingga saldo tersisa nol.',
+          zh: '上百个月的舍入累积，最后一行做精确平账让余额归零。实际银行也是这样——最后一期通常与标准 PMT 差几分钱。',
+        },
+      },
+      {
+        q: {
+          en: 'Can I export this schedule to CSV or PDF?',
+          ja: 'CSV や PDF でエクスポートできますか？',
+          vi: 'Tôi có thể xuất ra CSV hoặc PDF không?',
+          id: 'Bisakah saya mengekspor jadwal ini?',
+          zh: '可以导出 CSV 或 PDF 吗？',
+        },
+        a: {
+          en: 'Not yet. For now, you can copy the visible rows directly to a spreadsheet, or use your browser\'s print-to-PDF. Native export is on the roadmap.',
+          ja: '現時点では未対応です。ブラウザから表をスプレッドシートに直接コピー、またはブラウザの「PDFに印刷」をご利用ください。エクスポート機能はロードマップに入っています。',
+          vi: 'Chưa hỗ trợ. Hiện tại bạn có thể sao chép hàng hiển thị vào bảng tính, hoặc dùng "in sang PDF" của trình duyệt.',
+          id: 'Belum. Untuk saat ini, Anda dapat menyalin baris yang terlihat ke spreadsheet, atau gunakan "cetak ke PDF" browser.',
+          zh: '暂不支持。目前可直接把可见行复制到电子表格，或用浏览器"打印为 PDF"。导出功能在规划中。',
+        },
+      },
+      {
+        q: {
+          en: 'Does extra principal automatically appear in the schedule?',
+          ja: '繰上返済はこの表に自動反映されますか？',
+          vi: 'Trả thêm gốc có tự động hiện trong lịch không?',
+          id: 'Apakah pelunasan tambahan otomatis muncul?',
+          zh: '提前还款会自动出现在表中吗？',
+        },
+        a: {
+          en: 'No — this calculator shows the standard schedule for the original loan. To model extra payments, use the Extra Payment calculator instead, which shows months saved and interest saved.',
+          ja: 'いいえ — これは元のローンの標準償還表です。繰上返済をモデル化するには「繰上返済」計算機を使ってください。短縮月数と利息削減が表示されます。',
+          vi: 'Không — máy tính này hiển thị lịch chuẩn cho khoản vay gốc. Để mô hình hóa trả thêm, dùng máy tính "Trả thêm".',
+          id: 'Tidak — kalkulator ini menampilkan jadwal standar pinjaman asli. Untuk memodelkan pelunasan tambahan, gunakan kalkulator Extra Payment.',
+          zh: '不会——本计算器显示原贷款的标准还款表。要模拟提前还款，请使用"提前还款"计算器。',
+        },
+      },
+    ],
+  },
+
+  extra: {
+    useCases: [
+      {
+        title: {
+          en: 'Deploying a year-end bonus',
+          ja: '年末ボーナスの活用',
+          vi: 'Sử dụng tiền thưởng cuối năm',
+          id: 'Menggunakan bonus akhir tahun',
+          zh: '年终奖怎么用',
+        },
+        body: {
+          en: 'Splitting a $5,000 bonus into 12 extra monthly payments of ~$417 can shave years off a 30-year mortgage. Plug it in to see exactly how much faster you finish and how much interest you save.',
+          ja: '50万円のボーナスを12ヶ月で割って毎月+約4万円を加えると、30年ローンが数年短縮されます。具体的な短縮月数と利息削減を確認できます。',
+          vi: 'Chia tiền thưởng 5,000$ thành 12 lần trả thêm hàng tháng ~417$ có thể rút ngắn nhiều năm khỏi khoản vay 30 năm.',
+          id: 'Membagi bonus $5,000 menjadi 12 pelunasan tambahan bulanan ~$417 bisa memotong tahun dari hipotek 30 tahun.',
+          zh: '把 5,000 美元年终奖分摊成 12 次每月约 417 美元，可让 30 年贷款缩短数年。输入后能看到具体节省。',
+        },
+      },
+      {
+        title: {
+          en: 'Round up to the nearest $100',
+          ja: '月額を$100単位に切り上げ',
+          vi: 'Làm tròn đến $100 gần nhất',
+          id: 'Bulatkan ke $100 terdekat',
+          zh: '把月供凑整到下一个 100 元',
+        },
+        body: {
+          en: 'A simple, frictionless habit: round your monthly mortgage up to the next round number and treat the difference as extra principal. For most loans, this single trick saves a meaningful number of months.',
+          ja: 'シンプルで摩擦の少ない習慣: 月額返済を次のキリのいい額まで切り上げ、差額を元金返済に充当します。多くのローンでこれだけで意味のある月数を削減できます。',
+          vi: 'Thói quen đơn giản: làm tròn khoản trả hàng tháng lên số tròn gần nhất và coi chênh lệch là trả thêm gốc.',
+          id: 'Kebiasaan sederhana: bulatkan cicilan bulanan ke angka bulat berikutnya dan perlakukan selisih sebagai pelunasan tambahan.',
+          zh: '简单无痛的习惯：把月供向上凑整到下一个整数，差额作为额外本金。这一招就能省下不少月份。',
+        },
+      },
+      {
+        title: {
+          en: 'Comparing extra principal vs. investing the difference',
+          ja: '繰上返済 vs 差額投資の比較',
+          vi: 'So sánh trả thêm gốc với đầu tư phần chênh lệch',
+          id: 'Membandingkan pelunasan tambahan vs investasi',
+          zh: '提前还款 vs 把差额拿去投资',
+        },
+        body: {
+          en: 'Use this calculator to find your interest saved, then check the Compound Interest calculator with the same amount and your expected investment return. Whichever number is bigger wins on paper — but tax treatment and risk tolerance matter too.',
+          ja: 'この計算機で利息削減額を出し、同額・想定利回りで複利計算機を使ってください。大きい方が紙の上では勝ちですが、税制とリスク許容度も考慮を。',
+          vi: 'Dùng máy tính này để tìm lãi tiết kiệm, rồi dùng máy tính Lãi Kép với cùng số tiền và lợi suất kỳ vọng. Số lớn hơn thắng trên giấy.',
+          id: 'Gunakan kalkulator ini untuk menemukan bunga yang dihemat, lalu gunakan kalkulator Bunga Majemuk dengan jumlah dan return yang sama.',
+          zh: '用本计算器算出节省的利息，然后用复利计算器以同样金额和预期收益率计算。纸面上数字更大的赢——但税收与风险承受度也要考虑。',
+        },
+      },
+    ],
+    faqs: [
+      {
+        q: {
+          en: 'Does my lender allow applying extra to principal?',
+          ja: '銀行は元金返済に充当することを認めていますか？',
+          vi: 'Ngân hàng có cho phép áp dụng vào gốc không?',
+          id: 'Apakah pemberi pinjaman saya mengizinkan ini?',
+          zh: '我的银行允许把多付的钱用于本金吗？',
+        },
+        a: {
+          en: 'Most US, UK, Canadian, and Japanese lenders allow it for fixed-rate mortgages — and most have no prepayment penalty. Some loans (especially older auto and personal loans) compute interest using methods that make extra principal less effective. Check your loan terms.',
+          ja: '米・英・加・日の銀行のほとんどは固定金利ローンで認めており、繰上返済違約金もないのが普通です。一部のローン（特に古い自動車・個人ローン）は計算方法によって繰上効果が弱まります。契約書を確認してください。',
+          vi: 'Hầu hết ngân hàng ở Mỹ, Anh, Canada và Nhật cho phép với khoản vay lãi suất cố định — và hầu hết không có phí phạt trả sớm.',
+          id: 'Sebagian besar pemberi pinjaman di AS, Inggris, Kanada, dan Jepang mengizinkan untuk hipotek suku bunga tetap — dan kebanyakan tanpa penalti.',
+          zh: '美、英、加、日的大多数银行对固定利率贷款都允许，且通常无提前还款罚金。某些较旧的汽车或个人贷款的计息方式会削弱提前还款效果——请确认合同。',
+        },
+      },
+      {
+        q: {
+          en: 'Should I really pay extra instead of investing?',
+          ja: '投資より繰上返済を優先すべき？',
+          vi: 'Có nên trả thêm thay vì đầu tư?',
+          id: 'Haruskah saya benar-benar membayar lebih daripada berinvestasi?',
+          zh: '真的该提前还款而不投资吗？',
+        },
+        a: {
+          en: 'Mathematically, invest if expected return > mortgage rate; pay extra if not. Behaviorally, the guaranteed return of paying down debt is more valuable than its math suggests for many people. There is no universally right answer.',
+          ja: '数学的には、期待利回り > ローン金利なら投資、そうでなければ繰上返済。行動経済学的には、債務削減の確実なリターンが多くの人にとって数字以上の価値を持ちます。万人に正しい答えはありません。',
+          vi: 'Toán học: đầu tư nếu lợi suất kỳ vọng > lãi suất vay; trả thêm nếu không. Tâm lý: lợi suất đảm bảo của trả nợ có giá trị hơn con số.',
+          id: 'Secara matematis: investasi jika return yang diharapkan > suku bunga hipotek; bayar lebih jika tidak. Secara perilaku, return terjamin dari pelunasan utang lebih berharga.',
+          zh: '数学上：预期收益率 > 房贷利率就投资，否则提前还款。行为上：还债的"确定收益"对多数人来说价值高于纸面数字。没有放之四海皆准的答案。',
+        },
+      },
+      {
+        q: {
+          en: 'What about a one-time lump sum instead of monthly extras?',
+          ja: '毎月でなく一括の繰上返済はどうですか？',
+          vi: 'Một lần trả thêm lớn thay vì hàng tháng?',
+          id: 'Bagaimana dengan satu kali lump sum?',
+          zh: '一次性大额提前还款而不是每月加？',
+        },
+        a: {
+          en: 'A lump sum saves slightly more interest because the principal drops earlier. The exact amount depends on when you make it. As a rough rule, a one-time payment saves about 10-20% more interest than spreading the same amount monthly over the same year.',
+          ja: '一括返済の方が元金が早く減るため、わずかに利息削減効果が高くなります。実施タイミングで変わります。経験則として、同額を同じ年に毎月分散するより一括の方が10-20%多く利息を削減できます。',
+          vi: 'Một khoản lump sum tiết kiệm lãi nhiều hơn một chút vì gốc giảm sớm hơn. Quy tắc kinh nghiệm: tiết kiệm thêm 10-20% so với rải đều theo tháng.',
+          id: 'Lump sum menghemat sedikit lebih banyak bunga karena pokok turun lebih awal. Aturan praktis: 10-20% lebih banyak daripada disebar bulanan.',
+          zh: '一次性提前还款节省的利息略多，因为本金提前下降。经验法则：比同年分摊到每月多省 10-20% 利息。',
+        },
+      },
+    ],
+  },
+
+  biweekly: {
+    useCases: [
+      {
+        title: {
+          en: 'Aligning with biweekly paychecks',
+          ja: '隔週給料に合わせて返済',
+          vi: 'Đồng bộ với lương hai tuần',
+          id: 'Selaraskan dengan gaji dua mingguan',
+          zh: '与双周工资同步',
+        },
+        body: {
+          en: 'If you\'re paid every two weeks, splitting your mortgage in half and paying half each pay period feels natural and budget-aligned. The bonus is one extra full payment per year (26 half-payments = 13 full payments).',
+          ja: '隔週給料の方は、住宅ローンを半額ずつ給料日に支払う方式が家計に馴染みます。年26回の半額返済は実質13回分のフル返済 = 年に1回分追加効果。',
+          vi: 'Nếu bạn được trả lương hai tuần một lần, chia khoản vay làm đôi và trả nửa mỗi kỳ lương rất tự nhiên. Bonus: 26 nửa = 13 đầy đủ.',
+          id: 'Jika Anda dibayar setiap dua minggu, membagi hipotek menjadi dua dan membayar setengah setiap periode terasa alami. Bonus: 26 setengah = 13 penuh.',
+          zh: '若你每两周发一次工资，把月供拆半在每个发薪日支付很自然。好处：26 次半额=13 次全额，相当于每年多付 1 次。',
+        },
+      },
+      {
+        title: {
+          en: 'Sneaking an extra payment without lifestyle change',
+          ja: '生活習慣を変えずに追加返済',
+          vi: 'Lén trả thêm mà không đổi lối sống',
+          id: 'Menambah satu pelunasan tanpa mengubah gaya hidup',
+          zh: '不改变生活习惯就能多付一次',
+        },
+        body: {
+          en: 'Most months you make two biweekly payments. Twice a year you make three (because some months have three Fridays). That third payment in those months is the "13th payment" that shaves years off the loan.',
+          ja: '大抵の月は隔週返済が2回ですが、年2回は3回（金曜日が3回ある月）。その3回目が「13回目の月次返済」となり、ローン期間を数年短縮します。',
+          vi: 'Hầu hết tháng bạn trả 2 kỳ hai tuần. Hai lần một năm bạn trả 3 (vì một số tháng có 3 thứ Sáu). Kỳ thứ 3 đó là "kỳ trả thứ 13".',
+          id: 'Sebagian besar bulan Anda membayar dua kali. Dua kali setahun tiga kali (karena beberapa bulan punya tiga Jumat). Itulah "pembayaran ke-13".',
+          zh: '大多数月份你会还两次双周。一年里有两次会还三次（某些月份有三个周五）。那第三次就是"第 13 次"，正是让贷款缩短数年的关键。',
+        },
+      },
+      {
+        title: {
+          en: 'Avoiding lender biweekly programs with fees',
+          ja: '銀行有料の隔週プログラムを回避',
+          vi: 'Tránh chương trình hai tuần có phí của ngân hàng',
+          id: 'Menghindari program biweekly dengan biaya',
+          zh: '避开银行收费的双周计划',
+        },
+        body: {
+          en: 'Some lenders charge $300-$500 to "set up" biweekly payments. You can get the same effect for free by sending half your monthly payment every two weeks (if your lender accepts it) or by simply paying 1/12 extra principal each month.',
+          ja: '一部の銀行は隔週返済「設定」に$300-500課金します。同じ効果は (1) 銀行が受付するなら自分で隔週半額送金、または (2) 月々 1/12 を元金繰上、で無料で得られます。',
+          vi: 'Một số ngân hàng tính phí $300-500 để "thiết lập" thanh toán hai tuần. Bạn có thể nhận hiệu ứng tương tự miễn phí.',
+          id: 'Beberapa pemberi pinjaman mengenakan $300-500 untuk "mengatur" pembayaran biweekly. Anda bisa mendapat efek yang sama gratis.',
+          zh: '一些银行收 300-500 美元设置"双周"。你可以免费实现相同效果——只要银行接受，就自行每两周送半额，或每月多付 1/12 本金。',
+        },
+      },
+    ],
+    faqs: [
+      {
+        q: {
+          en: 'Why does biweekly save money if I\'m paying the same?',
+          ja: '同額返済なのに、なぜ隔週で節約できるのですか？',
+          vi: 'Tại sao trả hai tuần tiết kiệm nếu tôi trả số tiền như nhau?',
+          id: 'Mengapa biweekly menghemat jika saya membayar sama?',
+          zh: '总额一样的话为什么双周还能省？',
+        },
+        a: {
+          en: 'You\'re NOT paying the same — you\'re paying 13/12 = 8.33% more per year. There are 26 biweekly periods in a year (52 weeks ÷ 2), so 26 × half-payment = 13 full monthly payments. Compare to 12 monthly payments — you\'re paying one extra each year.',
+          ja: '実は同額ではありません — 年で 13/12 = 8.33% 多く支払っています。年は52週÷2 = 26隔週、つまり 26 × 半額 = 13回分のフル返済。月次12回と比べて年1回多い計算です。',
+          vi: 'Bạn KHÔNG trả số tiền như nhau — bạn trả 13/12 = 8,33% nhiều hơn mỗi năm. 26 kỳ hai tuần × nửa = 13 kỳ đầy đủ, so với 12 kỳ hàng tháng.',
+          id: 'Anda TIDAK membayar sama — Anda membayar 13/12 = 8,33% lebih banyak per tahun. 26 periode biweekly × setengah = 13 pembayaran penuh.',
+          zh: '其实你没付同样的总额——你每年多付 13/12 ≈ 8.33%。一年有 26 个双周（52÷2），26 × 半额 = 13 次全额。比月还款一年 12 次多 1 次。',
+        },
+      },
+      {
+        q: {
+          en: 'Does my lender accept biweekly payments directly?',
+          ja: '銀行は隔週返済を直接受け付けますか？',
+          vi: 'Ngân hàng có chấp nhận trực tiếp không?',
+          id: 'Apakah pemberi pinjaman menerima langsung?',
+          zh: '银行直接接受双周还款吗？',
+        },
+        a: {
+          en: 'Most US lenders only post payments monthly even if you send biweekly — meaning the half-payments sit until the full amount accumulates. That defeats the purpose. Either confirm your lender posts biweekly OR use the equivalent: pay 1/12 extra principal each month.',
+          ja: '米国の多くの銀行は隔週送金しても月次計上のみで、半額入金が貯まるまで保留されます。これでは効果が消えます。銀行が隔週計上するか確認するか、同等効果として月次に 1/12 元金繰上を使ってください。',
+          vi: 'Hầu hết ngân hàng Mỹ chỉ ghi nhận hàng tháng dù bạn gửi hai tuần. Hãy xác nhận ngân hàng ghi nhận hai tuần, HOẶC trả thêm 1/12 gốc mỗi tháng.',
+          id: 'Sebagian besar pemberi pinjaman AS hanya mencatat bulanan meski Anda kirim biweekly. Konfirmasi atau gunakan ekuivalen: 1/12 pelunasan tambahan tiap bulan.',
+          zh: '美国大多数银行即便你两周打款也按月入账，半额会被搁置到攒满月供——这样就失去意义。要么确认银行支持双周入账，要么改为每月多付 1/12 本金。',
+        },
+      },
+      {
+        q: {
+          en: 'Should I just round up monthly instead?',
+          ja: '月額を切り上げる方が簡単では？',
+          vi: 'Vậy chỉ làm tròn hàng tháng có dễ hơn?',
+          id: 'Apakah lebih mudah membulatkan bulanan saja?',
+          zh: '直接每月凑整不是更简单？',
+        },
+        a: {
+          en: 'Often yes. The biweekly trick is just "13 monthly payments per year" dressed up. If you just add 1/12 of your monthly payment as extra principal each month, you get nearly identical savings without any biweekly logistics — and your lender always accepts it.',
+          ja: 'しばしばその通りです。隔週方式は「年13回月次返済」を別の形で実現したもの。毎月 1/12 を元金繰上として追加すれば、隔週の手間なくほぼ同じ削減効果が得られ、銀行も必ず受け付けます。',
+          vi: 'Thường có. Mẹo hai tuần chỉ là "13 lần trả hàng tháng/năm" được ngụy trang. Cộng 1/12 hàng tháng làm gốc bổ sung — gần như tiết kiệm như nhau, ngân hàng luôn chấp nhận.',
+          id: 'Sering iya. Trik biweekly hanyalah "13 pembayaran bulanan per tahun" yang dikemas. Tambahkan 1/12 setiap bulan sebagai pokok tambahan — tabungan hampir identik.',
+          zh: '通常是的。"双周还款"本质就是把"每年还 13 次"换个说法。每月直接多付月供的 1/12 作为本金，效果几乎相同，且银行一定接受。',
+        },
+      },
+    ],
+  },
+
+  cagr: {
+    useCases: [
+      {
+        title: {
+          en: 'Comparing two mutual funds or ETFs',
+          ja: '投資信託・ETF の比較',
+          vi: 'So sánh hai quỹ',
+          id: 'Membandingkan dua reksa dana atau ETF',
+          zh: '比较两只基金或 ETF',
+        },
+        body: {
+          en: 'Two funds advertising "108% total return over 10 years" vs "75% over 5 years" can\'t be directly compared without converting to CAGR. Plug in begin/end values and years to put both on equal annualized footing.',
+          ja: '「10年で総リターン108%」と「5年で75%」のファンドは、CAGR に変換しないと直接比較できません。開始額・終了額・年数を入れて、両者を年率ベースで揃えてください。',
+          vi: 'Hai quỹ quảng cáo "108% trong 10 năm" với "75% trong 5 năm" không thể so trực tiếp nếu không quy về CAGR.',
+          id: 'Dua reksa dana mengiklankan "108% selama 10 tahun" vs "75% selama 5 tahun" tidak bisa dibandingkan langsung tanpa konversi ke CAGR.',
+          zh: '"10 年总回报 108%" 与 "5 年总回报 75%" 不换算成 CAGR 没法直接比。输入起止值和年数即可以年化基准对齐。',
+        },
+      },
+      {
+        title: {
+          en: 'Comparing your portfolio to S&P 500',
+          ja: 'ポートフォリオ vs S&P 500',
+          vi: 'So sánh danh mục với S&P 500',
+          id: 'Membandingkan portofolio dengan S&P 500',
+          zh: '把你的组合与标普 500 对比',
+        },
+        body: {
+          en: 'The S&P 500\'s historical CAGR is roughly 10% nominal / 7% real over the long run. Compute the CAGR of your own account from start balance to current balance over the same window to see whether you\'re beating or trailing the market.',
+          ja: 'S&P 500 の歴史的 CAGR は名目で約10%、実質で約7%。同じ期間で自分の口座の開始額〜現残高で CAGR を計算し、市場を上回っているか下回っているか確認できます。',
+          vi: 'CAGR lịch sử của S&P 500 khoảng 10% danh nghĩa / 7% thực dài hạn. Tính CAGR tài khoản của bạn để xem có vượt thị trường không.',
+          id: 'CAGR historis S&P 500 sekitar 10% nominal / 7% riil dalam jangka panjang. Hitung CAGR akun Anda untuk melihat apakah mengalahkan pasar.',
+          zh: '标普 500 长期历史 CAGR 约为名义 10% / 实质 7%。在相同时间窗内算出你账户起止值的 CAGR，看是跑赢还是跑输市场。',
+        },
+      },
+      {
+        title: {
+          en: 'Quantifying business revenue growth',
+          ja: '事業の売上成長率を定量化',
+          vi: 'Định lượng tăng trưởng doanh thu',
+          id: 'Mengukur pertumbuhan pendapatan bisnis',
+          zh: '量化企业收入增长',
+        },
+        body: {
+          en: 'For a small business or freelance income, CAGR turns "I earned $40k five years ago and $80k now" into a clean "≈14.9% annualized" — useful for pitching investors, comparing to industry benchmarks, or just gauging your own trajectory.',
+          ja: '小規模事業やフリーランス収入なら、CAGRは「5年前40万・現在80万」を「年率約14.9%」というクリーンな指標に変換します。投資家への提案、業界比較、自分の軌道把握に有用。',
+          vi: 'Với doanh nghiệp nhỏ hoặc thu nhập tự do, CAGR biến "5 năm trước 40k$, hiện 80k$" thành "khoảng 14,9% hàng năm" — hữu ích để pitch nhà đầu tư.',
+          id: 'Untuk bisnis kecil atau pendapatan freelance, CAGR mengubah "5 tahun lalu $40k, sekarang $80k" menjadi "~14,9% per tahun" — berguna untuk presentasi investor.',
+          zh: '对小企业或自由职业收入，CAGR 把"五年前 4 万、现在 8 万"换算成干净的"约 14.9% 年化"——对投资者路演、行业对标或自我评估都有用。',
+        },
+      },
+    ],
+    faqs: [
+      {
+        q: {
+          en: 'CAGR vs. simple average annual return — what\'s the difference?',
+          ja: 'CAGR と単純平均年リターンはどう違いますか？',
+          vi: 'CAGR khác lợi nhuận trung bình đơn giản như thế nào?',
+          id: 'CAGR vs return tahunan rata-rata — apa bedanya?',
+          zh: 'CAGR 与简单年均回报有什么区别？',
+        },
+        a: {
+          en: 'CAGR captures compounding; simple average doesn\'t. A portfolio that goes +50% then -50% has a simple average of 0% but its CAGR is −13.4% — because $100 → $150 → $75. Simple averages always overstate compound growth, especially with volatility.',
+          ja: 'CAGR は複利を捕捉し、単純平均はしません。+50%・-50% のポートフォリオは単純平均0%ですが、CAGR は -13.4%（$100 → $150 → $75）。単純平均は常に複利成長を過大評価し、ボラが大きいほど顕著です。',
+          vi: 'CAGR bắt được lãi kép; trung bình đơn giản thì không. Danh mục +50% rồi -50% có trung bình 0% nhưng CAGR -13,4%.',
+          id: 'CAGR menangkap penggandaan; rata-rata sederhana tidak. Portofolio +50% lalu -50% punya rata-rata 0% tapi CAGR -13,4%.',
+          zh: 'CAGR 体现复利，简单平均不会。一组先 +50%、再 -50% 的回报：简单平均是 0%，但 CAGR 是 -13.4%（100 → 150 → 75）。简单平均总会高估复合增长，波动越大差距越大。',
+        },
+      },
+      {
+        q: {
+          en: 'What if there were deposits or withdrawals during the period?',
+          ja: '期間中に入金・出金があった場合は？',
+          vi: 'Nếu có nạp/rút trong giai đoạn?',
+          id: 'Bagaimana jika ada setoran atau penarikan?',
+          zh: '期间内有存取款怎么办？',
+        },
+        a: {
+          en: 'CAGR doesn\'t account for cash flows — use IRR (internal rate of return) for that. CAGR is correct only if the same money sat from start to end with no in/outs. If you added or withdrew significantly, treat the CAGR result as approximate.',
+          ja: 'CAGR はキャッシュフローを考慮しません — その場合は IRR（内部収益率）を使ってください。CAGR は開始時の資金が出入りなく終了時まで運用された場合のみ正確です。大きな入出金があった場合は近似値として扱ってください。',
+          vi: 'CAGR không tính dòng tiền — dùng IRR cho việc đó. CAGR chỉ đúng nếu cùng số tiền nằm từ đầu đến cuối.',
+          id: 'CAGR tidak memperhitungkan arus kas — gunakan IRR untuk itu. CAGR akurat hanya jika uang yang sama duduk dari awal hingga akhir.',
+          zh: 'CAGR 不计现金流——这种情况要用 IRR（内部收益率）。只有期间内没有存取款时 CAGR 才准确，否则只能视为近似值。',
+        },
+      },
+      {
+        q: {
+          en: 'Why use multiple years instead of just last year\'s return?',
+          ja: 'なぜ複数年で見るのですか？',
+          vi: 'Tại sao dùng nhiều năm thay vì chỉ năm gần nhất?',
+          id: 'Mengapa gunakan beberapa tahun?',
+          zh: '为什么要用多年而不是只看去年？',
+        },
+        a: {
+          en: 'Single-year returns are noisy — equities easily swing 20% in either direction. CAGR over 5+ years smooths that noise and is the standard performance measure for funds and investments. Marketing materials often cherry-pick a good single year; a CAGR over a decade is harder to fake.',
+          ja: '単年リターンはノイズが多く、株式は±20%動きます。5年以上の CAGR がノイズを平滑化し、ファンド・投資の標準的パフォーマンス指標です。マーケ資料は良い単年を切り取りがちですが、10年 CAGR はごまかしにくい。',
+          vi: 'Lợi nhuận một năm rất nhiễu — cổ phiếu dễ biến động 20% theo bất kỳ hướng nào. CAGR 5+ năm làm mịn nhiễu.',
+          id: 'Return satu tahun sangat berisik — saham mudah berfluktuasi 20% ke arah mana pun. CAGR selama 5+ tahun memuluskan kebisingan itu.',
+          zh: '单年回报噪音大——股票一年涨跌 20% 很常见。5 年以上的 CAGR 能平滑噪声，是基金和投资的行业标准。营销材料常挑好年份；十年 CAGR 难以造假。',
+        },
+      },
+    ],
+  },
+
+  savings: {
+    useCases: [
+      {
+        title: {
+          en: 'House down-payment timeline',
+          ja: '住宅頭金の貯蓄期間',
+          vi: 'Thời gian tiết kiệm tiền đặt cọc nhà',
+          id: 'Garis waktu uang muka rumah',
+          zh: '攒首付要多久',
+        },
+        body: {
+          en: 'Set the target to your desired down payment (often 20% of the home price), enter your current savings and how much you can save monthly, and see exactly how many years until you can buy.',
+          ja: '希望物件価格の20%（など）を目標額に設定し、現在の貯蓄額と月次積立可能額を入れて、何年後に買えるかを正確に把握できます。',
+          vi: 'Đặt mục tiêu là tiền đặt cọc mong muốn (thường 20% giá nhà), nhập tiết kiệm hiện tại và mức có thể tiết kiệm hàng tháng để biết chính xác số năm đến khi mua được.',
+          id: 'Tetapkan target ke uang muka yang diinginkan (biasanya 20% harga rumah), masukkan tabungan saat ini dan jumlah bulanan, lihat tahun untuk bisa beli.',
+          zh: '把目标设为期望首付（通常房价 20%），输入现有储蓄和每月能存入的金额，立即看到几年后能买房。',
+        },
+      },
+      {
+        title: {
+          en: 'FIRE / early retirement targeting',
+          ja: 'FIRE / 早期退職の目標設定',
+          vi: 'Mục tiêu FIRE / nghỉ hưu sớm',
+          id: 'Target FIRE / pensiun dini',
+          zh: 'FIRE / 提前退休目标',
+        },
+        body: {
+          en: 'A common FIRE target is 25× annual expenses (the 4% rule). Plug in that target, your starting nest egg, and your monthly savings to see whether your timeline matches your "freedom date".',
+          ja: '一般的な FIRE 目標は年間支出の25倍（4%ルール）。目標額・現在の運用元本・月次積立を入れて、自分の「解放の日」に間に合うか確認してください。',
+          vi: 'Mục tiêu FIRE phổ biến là 25× chi phí năm (quy tắc 4%). Nhập để xem lộ trình có khớp "ngày tự do" không.',
+          id: 'Target FIRE umum adalah 25× pengeluaran tahunan (aturan 4%). Masukkan untuk melihat apakah lini masa cocok dengan "tanggal kebebasan".',
+          zh: 'FIRE 常见目标是年支出的 25 倍（4% 法则）。输入目标、现有本金和月存款，看时间线是否对得上你的"自由日"。',
+        },
+      },
+      {
+        title: {
+          en: 'Emergency fund buildup',
+          ja: '緊急予備資金の構築',
+          vi: 'Xây dựng quỹ khẩn cấp',
+          id: 'Membangun dana darurat',
+          zh: '建立应急基金',
+        },
+        body: {
+          en: 'Most planners suggest 3-6 months of expenses in a high-yield savings account. Use this calculator with target = 6 × monthly expenses, rate = your savings account APY, to see how long aggressive saving needs to last.',
+          ja: 'ほとんどのプランナーが高利回り預金に支出の3-6ヶ月分を推奨します。目標 = 月支出×6、利率 = 預金口座 APY で、どれだけの期間集中的に貯める必要があるか把握できます。',
+          vi: 'Các nhà hoạch định khuyến nghị 3-6 tháng chi tiêu trong tài khoản tiết kiệm lãi suất cao. Dùng máy tính với target = 6× chi tiêu tháng.',
+          id: 'Sebagian besar perencana menyarankan 3-6 bulan pengeluaran di rekening tabungan hasil tinggi. Gunakan target = 6× pengeluaran bulanan.',
+          zh: '理财师通常建议在高息账户存 3-6 个月支出。把目标设为月支出 × 6、利率设为账户 APY，看激进储蓄要持续多久。',
+        },
+      },
+    ],
+    faqs: [
+      {
+        q: {
+          en: 'What rate should I assume?',
+          ja: 'どの利回りを使えばいいですか？',
+          vi: 'Tôi nên giả định lãi suất nào?',
+          id: 'Berapa tingkat yang harus saya asumsikan?',
+          zh: '该假设多少收益率？',
+        },
+        a: {
+          en: 'For cash savings: your account\'s APY (typically 0.5-5%). For invested savings (index funds): use 5-7% as a conservative real return after inflation, or 7-10% nominal. Be honest with yourself — high assumptions feel good but don\'t change reality.',
+          ja: '現金貯蓄: 預金口座の APY（通常 0.5-5%）。投資貯蓄（インデックスファンド）: インフレ後の実質で保守的に5-7%、名目で7-10%。高めに見積もると気分はいいですが現実は変わりません — 自分に正直に。',
+          vi: 'Tiết kiệm tiền mặt: APY tài khoản (thường 0,5-5%). Tiết kiệm đầu tư (quỹ chỉ số): 5-7% bảo thủ sau lạm phát, 7-10% danh nghĩa.',
+          id: 'Tabungan tunai: APY akun Anda (biasanya 0,5-5%). Tabungan diinvestasikan (reksa indeks): 5-7% konservatif setelah inflasi, 7-10% nominal.',
+          zh: '现金储蓄：账户 APY（通常 0.5-5%）。投资储蓄（指数基金）：保守扣通胀后 5-7%，名义 7-10%。对自己诚实——高估只会让你感觉良好，不改变现实。',
+        },
+      },
+      {
+        q: {
+          en: 'What if I can\'t make every monthly contribution?',
+          ja: '毎月確実に積み立てられない場合は？',
+          vi: 'Nếu tôi không thể đóng góp mỗi tháng?',
+          id: 'Bagaimana jika saya tidak bisa setor tiap bulan?',
+          zh: '如果我做不到每月按时存怎么办？',
+        },
+        a: {
+          en: 'Use a realistic average — if you skip 2 months a year, your real monthly contribution is 10/12 of what you "intend." Run the calculator with the lower realistic number; you\'ll see the timeline stretch by months or years. Better to plan with reality than discover the gap later.',
+          ja: '現実的な平均を使ってください — 年に2ヶ月スキップするなら、実質月次積立は意図額の 10/12。低めの現実値で計算すると、達成期間が数ヶ月〜数年延びます。後で気付くより、最初から現実に基づいて計画する方が良い。',
+          vi: 'Dùng mức trung bình thực tế — nếu bỏ qua 2 tháng/năm, đóng góp thực tế là 10/12 dự định. Lập kế hoạch với thực tế.',
+          id: 'Gunakan rata-rata realistis — jika lewatkan 2 bulan setahun, kontribusi nyata adalah 10/12 dari yang "dimaksudkan".',
+          zh: '用现实平均值——如果一年漏存 2 个月，实际月存款是计划的 10/12。用偏低的现实数字算，时间线会延长几个月到几年。早面对比晚发现好。',
+        },
+      },
+      {
+        q: {
+          en: 'Is the result before or after tax?',
+          ja: '結果は税引前ですか税引後ですか？',
+          vi: 'Kết quả là trước thuế hay sau thuế?',
+          id: 'Apakah hasilnya sebelum atau sesudah pajak?',
+          zh: '结果是税前还是税后？',
+        },
+        a: {
+          en: 'Before tax. Capital gains, interest, and dividend taxes vary widely by country and account type (taxable vs. retirement). For taxable accounts, multiply your assumed rate by (1 − your tax rate) to get a tax-adjusted return — typically 70-85% of nominal in most jurisdictions.',
+          ja: '税引前です。キャピタルゲイン、利息、配当の税率は国・口座タイプ（課税口座 vs 退職口座）で大きく異なります。課税口座の場合、想定利率に (1 − 税率) を掛けて税引後利回りに調整 — 多くの国で名目の70-85%程度。',
+          vi: 'Trước thuế. Thuế lãi vốn, lãi suất và cổ tức khác nhau nhiều theo quốc gia và loại tài khoản. Với tài khoản chịu thuế, nhân lãi suất với (1 − thuế suất).',
+          id: 'Sebelum pajak. Pajak capital gain, bunga, dan dividen sangat bervariasi per negara dan jenis akun. Untuk akun kena pajak, kalikan tingkat dengan (1 − tarif pajak).',
+          zh: '税前。各国资本利得、利息和股息税率差异很大，账户类型也影响（普通 vs 退休账户）。普通账户请把假设利率乘以 (1 − 你的税率)——大多数地区约为名义值的 70-85%。',
+        },
+      },
+    ],
+  },
 };
