@@ -11,8 +11,15 @@ const PRINCIPLES = [
 
 const TOOLS = [
   { nameKey: 'tabs.mortgage', descKey: 'about.toolMortgage' },
+  { nameKey: 'tabs.refinance', descKey: 'about.toolRefinance' },
+  { nameKey: 'tabs.affordability', descKey: 'about.toolAffordability' },
+  { nameKey: 'tabs.amortization', descKey: 'about.toolAmortization' },
+  { nameKey: 'tabs.extra', descKey: 'about.toolExtra' },
+  { nameKey: 'tabs.biweekly', descKey: 'about.toolBiweekly' },
   { nameKey: 'tabs.loan', descKey: 'about.toolLoan' },
   { nameKey: 'tabs.compound', descKey: 'about.toolCompound' },
+  { nameKey: 'tabs.cagr', descKey: 'about.toolCagr' },
+  { nameKey: 'tabs.savings', descKey: 'about.toolSavings' },
 ];
 
 function AboutPage() {

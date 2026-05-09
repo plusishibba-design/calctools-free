@@ -12,6 +12,13 @@ const AboutPage = lazy(() => import('./components/AboutPage'));
 const MortgageMode = lazy(() => import('./components/MortgageMode'));
 const LoanMode = lazy(() => import('./components/LoanMode'));
 const CompoundMode = lazy(() => import('./components/CompoundMode'));
+const RefinanceMode = lazy(() => import('./components/RefinanceMode'));
+const AffordabilityMode = lazy(() => import('./components/AffordabilityMode'));
+const AmortizationMode = lazy(() => import('./components/AmortizationMode'));
+const ExtraPaymentMode = lazy(() => import('./components/ExtraPaymentMode'));
+const BiweeklyMode = lazy(() => import('./components/BiweeklyMode'));
+const CagrMode = lazy(() => import('./components/CagrMode'));
+const SavingsGoalMode = lazy(() => import('./components/SavingsGoalMode'));
 
 const LANGS = [
   { code: 'en', label: 'English' },
@@ -23,8 +30,15 @@ const LANGS = [
 
 const TABS = [
   { key: 'mortgage', labelKey: 'tabs.mortgage', i18nKey: 'mortgage', category: 'finance' },
+  { key: 'refinance', labelKey: 'tabs.refinance', i18nKey: 'refinance', category: 'finance' },
+  { key: 'affordability', labelKey: 'tabs.affordability', i18nKey: 'affordability', category: 'finance' },
+  { key: 'amortization', labelKey: 'tabs.amortization', i18nKey: 'amortization', category: 'finance' },
+  { key: 'extra', labelKey: 'tabs.extra', i18nKey: 'extra', category: 'finance' },
+  { key: 'biweekly', labelKey: 'tabs.biweekly', i18nKey: 'biweekly', category: 'finance' },
   { key: 'loan', labelKey: 'tabs.loan', i18nKey: 'loan', category: 'finance' },
   { key: 'compound', labelKey: 'tabs.compound', i18nKey: 'compound', category: 'finance' },
+  { key: 'cagr', labelKey: 'tabs.cagr', i18nKey: 'cagr', category: 'finance' },
+  { key: 'savings', labelKey: 'tabs.savings', i18nKey: 'savings', category: 'finance' },
   // Future categories: health (BMI/Body fat), date (age/diff), math (percent/tip)
 ];
 
@@ -113,8 +127,15 @@ function AppInner() {
   const renderContent = () => {
     switch (activeTab) {
       case 'mortgage': return <MortgageMode />;
+      case 'refinance': return <RefinanceMode />;
+      case 'affordability': return <AffordabilityMode />;
+      case 'amortization': return <AmortizationMode />;
+      case 'extra': return <ExtraPaymentMode />;
+      case 'biweekly': return <BiweeklyMode />;
       case 'loan': return <LoanMode />;
       case 'compound': return <CompoundMode />;
+      case 'cagr': return <CagrMode />;
+      case 'savings': return <SavingsGoalMode />;
       default: return <MortgageMode />;
     }
   };

@@ -3,8 +3,15 @@ import { useLanguage } from '../LanguageContext';
 
 const TOOLS = [
   { key: 'mortgage', nameKey: 'tabs.mortgage', descKey: 'about.toolMortgage' },
+  { key: 'refinance', nameKey: 'tabs.refinance', descKey: 'about.toolRefinance' },
+  { key: 'affordability', nameKey: 'tabs.affordability', descKey: 'about.toolAffordability' },
+  { key: 'amortization', nameKey: 'tabs.amortization', descKey: 'about.toolAmortization' },
+  { key: 'extra', nameKey: 'tabs.extra', descKey: 'about.toolExtra' },
+  { key: 'biweekly', nameKey: 'tabs.biweekly', descKey: 'about.toolBiweekly' },
   { key: 'loan', nameKey: 'tabs.loan', descKey: 'about.toolLoan' },
   { key: 'compound', nameKey: 'tabs.compound', descKey: 'about.toolCompound' },
+  { key: 'cagr', nameKey: 'tabs.cagr', descKey: 'about.toolCagr' },
+  { key: 'savings', nameKey: 'tabs.savings', descKey: 'about.toolSavings' },
 ];
 
 const STRENGTHS = [

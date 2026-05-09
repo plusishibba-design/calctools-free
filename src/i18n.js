@@ -8,8 +8,15 @@ const translations = {
     'app.subtitle': 'BROWSER-NATIVE · NO SIGNUP · NO UPLOAD',
 
     'tabs.mortgage': 'Mortgage',
+    'tabs.refinance': 'Refinance',
+    'tabs.affordability': 'Affordability',
+    'tabs.amortization': 'Amortization',
+    'tabs.extra': 'Extra Payment',
+    'tabs.biweekly': 'Biweekly',
     'tabs.loan': 'Loan',
     'tabs.compound': 'Compound Interest',
+    'tabs.cagr': 'CAGR',
+    'tabs.savings': 'Savings Goal',
 
     'nav.about': 'About',
     'nav.contact': 'Contact',
@@ -79,8 +86,15 @@ const translations = {
     'about.toolsTitle': 'What you can calculate',
     'about.toolsIntro': 'The current set focuses on personal finance:',
     'about.toolMortgage': 'estimate the monthly payment on a fixed-rate home loan, with principal and interest split.',
+    'about.toolRefinance': 'compare your current mortgage with a refinance scenario and find the break-even month.',
+    'about.toolAffordability': 'find the loan size you qualify for under the 28/36 debt-to-income rule.',
+    'about.toolAmortization': 'see the full month-by-month payment schedule with running balance.',
+    'about.toolExtra': 'see how much faster you finish (and how much you save) with an extra monthly payment.',
+    'about.toolBiweekly': 'compare a standard monthly schedule with a biweekly schedule and quantify the savings.',
     'about.toolLoan': 'estimate monthly payments on personal, auto, or any fixed-rate installment loan.',
     'about.toolCompound': 'see how savings grow with monthly contributions and compound interest over time.',
+    'about.toolCagr': 'compute compound annual growth rate from a beginning and ending value over a number of years.',
+    'about.toolSavings': 'find how long it takes to reach a savings target with monthly contributions and compound interest.',
     'about.techTitle': 'How it works under the hood',
     'about.techP1':
       'Calc Tools is built on the same stack we use for our editorial client work — but stripped down to a single-page calculator engine:',
@@ -174,6 +188,126 @@ const translations = {
     'compound.years': 'Years',
     'compound.assumptions':
       'Monthly compounding, contributions made at end of month. Inflation, taxes, and fees are not included — actual results vary.',
+
+    // Refinance Calculator
+    'refinance.title': 'Refinance Calculator',
+    'refinance.seoDesc':
+      'Compare your current mortgage with a refinance scenario. See monthly savings, break-even month against closing costs, and lifetime interest savings.',
+    'refinance.fieldBalance': 'Current loan balance',
+    'refinance.fieldCurrentRate': 'Current rate (annual, %)',
+    'refinance.fieldRemainYears': 'Years remaining on current loan',
+    'refinance.fieldNewRate': 'New rate (annual, %)',
+    'refinance.fieldNewYears': 'New term (years)',
+    'refinance.fieldClosingCosts': 'Closing costs',
+    'refinance.fieldCurrency': 'Currency',
+    'refinance.resultBreakEven': 'Break-even point',
+    'refinance.months': 'months',
+    'refinance.monthlySavings': 'Monthly savings',
+    'refinance.newPayment': 'New monthly payment',
+    'refinance.lifetimeSavings': 'Lifetime savings (after fees)',
+    'refinance.assumptions':
+      'Closing costs paid up-front. Lifetime savings = old total interest − new total interest − closing costs. Tax deductibility of interest is not modeled.',
+
+    // Affordability Calculator
+    'affordability.title': 'Mortgage Affordability Calculator',
+    'affordability.seoDesc':
+      'How much home can you afford? Apply the standard 28/36 debt-to-income rule to your gross income, monthly debts, and down payment to find a maximum home price.',
+    'affordability.fieldIncome': 'Annual gross income',
+    'affordability.fieldDebts': 'Other monthly debts',
+    'affordability.fieldDownPayment': 'Down payment',
+    'affordability.fieldRate': 'Interest rate (annual, %)',
+    'affordability.fieldTerm': 'Term (years)',
+    'affordability.fieldTaxIns': 'Tax + insurance (monthly)',
+    'affordability.fieldCurrency': 'Currency',
+    'affordability.resultMaxHome': 'Max home price',
+    'affordability.maxLoan': 'Max loan amount',
+    'affordability.maxMonthly': 'Max monthly payment (PITI)',
+    'affordability.constraint': 'Limiting rule',
+    'affordability.constraintFront': 'Front-end (28%)',
+    'affordability.constraintBack': 'Back-end (36%)',
+    'affordability.assumptions':
+      'Front-end rule: housing ≤ 28% of gross monthly income. Back-end rule: housing + debts ≤ 36%. Lenders may use stricter or looser ratios in practice.',
+
+    // Amortization Schedule
+    'amortization.title': 'Amortization Schedule',
+    'amortization.seoDesc':
+      'See the full month-by-month payment breakdown of a fixed-rate loan: principal paid, interest paid, and remaining balance for every month of the term.',
+    'amortization.fieldPrincipal': 'Loan amount',
+    'amortization.fieldRate': 'Interest rate (annual, %)',
+    'amortization.fieldTerm': 'Term (years)',
+    'amortization.fieldCurrency': 'Currency',
+    'amortization.monthlyPayment': 'Monthly payment',
+    'amortization.totalInterest': 'Total interest',
+    'amortization.totalPayments': 'Total payments',
+    'amortization.scheduleTitle': 'III — Schedule',
+    'amortization.colPrincipal': 'Principal',
+    'amortization.colInterest': 'Interest',
+    'amortization.colBalance': 'Balance',
+
+    // Extra Payment
+    'extra.title': 'Extra Payment Calculator',
+    'extra.seoDesc':
+      'See how much sooner you finish a mortgage and how much interest you save by adding an extra amount to each monthly payment.',
+    'extra.fieldPrincipal': 'Loan amount',
+    'extra.fieldRate': 'Interest rate (annual, %)',
+    'extra.fieldTerm': 'Term (years)',
+    'extra.fieldExtra': 'Extra monthly payment',
+    'extra.fieldCurrency': 'Currency',
+    'extra.monthsSaved': 'Months saved',
+    'extra.months': 'months',
+    'extra.interestSaved': 'Interest saved',
+    'extra.newPayoff': 'New payoff (months)',
+    'extra.newMonthly': 'New monthly payment',
+    'extra.assumptions':
+      'Extra payment applied directly to principal each month. Assumes no prepayment penalty and that the lender allows applying extra to principal.',
+
+    // Biweekly
+    'biweekly.title': 'Biweekly Payment Calculator',
+    'biweekly.seoDesc':
+      'Compare a standard monthly mortgage schedule with a biweekly schedule (26 payments/year = effectively 13 monthly payments). See months saved and interest saved.',
+    'biweekly.fieldPrincipal': 'Loan amount',
+    'biweekly.fieldRate': 'Interest rate (annual, %)',
+    'biweekly.fieldTerm': 'Term (years)',
+    'biweekly.fieldCurrency': 'Currency',
+    'biweekly.biweeklyPayment': 'Biweekly payment',
+    'biweekly.monthlyEquiv': 'Monthly equivalent',
+    'biweekly.monthsSaved': 'Months saved',
+    'biweekly.interestSaved': 'Interest saved',
+    'biweekly.assumptions':
+      'Biweekly payments = 26/year, which equals 13 monthly payments worth — one extra each year. Assumes lender accepts biweekly without fee.',
+
+    // CAGR
+    'cagr.title': 'CAGR (Compound Annual Growth Rate) Calculator',
+    'cagr.seoDesc':
+      'Calculate the compound annual growth rate of an investment from a beginning and ending value over a given number of years. Useful for comparing investment performance.',
+    'cagr.fieldBegin': 'Beginning value',
+    'cagr.fieldEnd': 'Ending value',
+    'cagr.fieldYears': 'Years',
+    'cagr.fieldCurrency': 'Currency',
+    'cagr.resultLabel': 'CAGR',
+    'cagr.totalReturn': 'Total return',
+    'cagr.absoluteGain': 'Absolute gain',
+    'cagr.years': 'Years',
+    'cagr.assumptions':
+      'Pure CAGR formula: (End / Begin)^(1/Years) − 1. Does not account for cash flows during the period (use IRR for that). Inflation and taxes not included.',
+
+    // Savings Goal
+    'savings.title': 'Savings Goal Calculator',
+    'savings.seoDesc':
+      'Find how long it takes to reach a savings target with a starting principal, monthly contributions, and a given annual return rate.',
+    'savings.fieldTarget': 'Target amount',
+    'savings.fieldPrincipal': 'Starting principal',
+    'savings.fieldContribution': 'Monthly contribution',
+    'savings.fieldRate': 'Annual return (%)',
+    'savings.fieldCurrency': 'Currency',
+    'savings.resultYears': 'Time to goal',
+    'savings.years': 'years',
+    'savings.resultMonths': 'Months',
+    'savings.totalContrib': 'Total contributions',
+    'savings.totalInterest': 'Earned interest',
+    'savings.unreachable': 'With these inputs, the goal is not reachable. Increase the contribution or rate.',
+    'savings.assumptions':
+      'Monthly compounding, contributions at end of month. Inflation, taxes, and fees not included — actual results vary.',
   },
 
   // ── Japanese ──
@@ -182,8 +316,15 @@ const translations = {
     'app.subtitle': 'ブラウザ完結 · 登録不要 · アップロード不要',
 
     'tabs.mortgage': '住宅ローン',
+    'tabs.refinance': '借換',
+    'tabs.affordability': '借入可能額',
+    'tabs.amortization': '償還表',
+    'tabs.extra': '繰上返済',
+    'tabs.biweekly': '隔週返済',
     'tabs.loan': 'ローン',
     'tabs.compound': '複利計算',
+    'tabs.cagr': 'CAGR',
+    'tabs.savings': '貯蓄目標',
 
     'nav.about': 'About',
     'nav.contact': 'Contact',
@@ -253,8 +394,15 @@ const translations = {
     'about.toolsTitle': '計算できること',
     'about.toolsIntro': '現在のセットはパーソナルファイナンスに焦点を当てています:',
     'about.toolMortgage': '固定金利住宅ローンの月額返済を、元金・利息内訳付きで算出。',
+    'about.toolRefinance': '現行ローンと借換シナリオを比較し、損益分岐月を算出。',
+    'about.toolAffordability': '28/36 DTI ルールで借入可能額の目安を算出。',
+    'about.toolAmortization': '月次の元金・利息・残高を全期間にわたって表示。',
+    'about.toolExtra': '繰上返済を加えた場合の短縮期間と利息削減額を計算。',
+    'about.toolBiweekly': '月次返済と隔週返済を比較して、利息削減額を算出。',
     'about.toolLoan': '個人ローン・自動車ローン・各種固定金利分割払いの月額を算出。',
     'about.toolCompound': '初期元本＋月次積立を複利で運用したときの将来価値・総積立額・利息を算出。',
+    'about.toolCagr': '開始額と終了額・年数から年率複利成長率（CAGR）を算出。',
+    'about.toolSavings': '初期元本＋月次積立で目標金額に到達するまでの期間を算出。',
     'about.techTitle': '裏側の仕組み',
     'about.techP1':
       'Calc Tools はクライアント案件と同じスタックで作られていますが、計算機エンジンに削ぎ落としています:',
@@ -348,6 +496,126 @@ const translations = {
     'compound.years': '期間（年）',
     'compound.assumptions':
       '月次複利、月末積立。インフレ・税・手数料は含みません — 実績は変動します。',
+
+    // Refinance
+    'refinance.title': '借換計算機',
+    'refinance.seoDesc':
+      '現行ローンと借換シナリオを比較。月額削減額・諸費用に対する損益分岐月・生涯利息削減額を計算します。',
+    'refinance.fieldBalance': '現行ローン残高',
+    'refinance.fieldCurrentRate': '現行金利 (年, %)',
+    'refinance.fieldRemainYears': '現行ローン残期間（年）',
+    'refinance.fieldNewRate': '新金利 (年, %)',
+    'refinance.fieldNewYears': '新ローン期間（年）',
+    'refinance.fieldClosingCosts': '諸費用',
+    'refinance.fieldCurrency': '通貨',
+    'refinance.resultBreakEven': '損益分岐月',
+    'refinance.months': 'ヶ月',
+    'refinance.monthlySavings': '月額削減',
+    'refinance.newPayment': '新月額返済',
+    'refinance.lifetimeSavings': '生涯削減（諸費用差引後）',
+    'refinance.assumptions':
+      '諸費用は前払い前提。生涯削減 = 旧総利息 − 新総利息 − 諸費用。住宅ローン控除等の税制効果は含みません。',
+
+    // Affordability
+    'affordability.title': '住宅ローン借入可能額計算',
+    'affordability.seoDesc':
+      'いくらの家が買えるか？年収・既存債務・頭金から、標準的な 28/36 DTI ルールで最大物件価格を算出します。',
+    'affordability.fieldIncome': '年収（額面）',
+    'affordability.fieldDebts': '他の月次債務',
+    'affordability.fieldDownPayment': '頭金',
+    'affordability.fieldRate': '金利 (年, %)',
+    'affordability.fieldTerm': '期間（年）',
+    'affordability.fieldTaxIns': '固定資産税＋火災保険（月額）',
+    'affordability.fieldCurrency': '通貨',
+    'affordability.resultMaxHome': '購入可能物件価格',
+    'affordability.maxLoan': '最大借入額',
+    'affordability.maxMonthly': '最大月額（PITI）',
+    'affordability.constraint': '制約ルール',
+    'affordability.constraintFront': 'フロントエンド (28%)',
+    'affordability.constraintBack': 'バックエンド (36%)',
+    'affordability.assumptions':
+      'フロントエンド: 住居費 ≤ 月収の28%。バックエンド: 住居費＋既存債務 ≤ 36%。実際の銀行はより厳しい/緩い基準を使うことがあります。',
+
+    // Amortization
+    'amortization.title': '償還表',
+    'amortization.seoDesc':
+      '固定金利ローンの月次返済内訳を全期間表示: 各月の元金返済額・利息支払額・残高。',
+    'amortization.fieldPrincipal': '借入額',
+    'amortization.fieldRate': '金利 (年, %)',
+    'amortization.fieldTerm': '期間（年）',
+    'amortization.fieldCurrency': '通貨',
+    'amortization.monthlyPayment': '月額返済',
+    'amortization.totalInterest': '総利息',
+    'amortization.totalPayments': '返済回数',
+    'amortization.scheduleTitle': 'III — 月次内訳',
+    'amortization.colPrincipal': '元金',
+    'amortization.colInterest': '利息',
+    'amortization.colBalance': '残高',
+
+    // Extra
+    'extra.title': '繰上返済計算機',
+    'extra.seoDesc':
+      '毎月の返済に追加額を加えたとき、ローンが何ヶ月早く完済し、利息をいくら削減できるかを計算します。',
+    'extra.fieldPrincipal': '借入額',
+    'extra.fieldRate': '金利 (年, %)',
+    'extra.fieldTerm': '期間（年）',
+    'extra.fieldExtra': '追加月次返済',
+    'extra.fieldCurrency': '通貨',
+    'extra.monthsSaved': '短縮月数',
+    'extra.months': 'ヶ月',
+    'extra.interestSaved': '利息削減',
+    'extra.newPayoff': '新完済（月数）',
+    'extra.newMonthly': '新月額返済',
+    'extra.assumptions':
+      '追加額は元金に直接充当される前提。繰上返済違約金は考慮していません。',
+
+    // Biweekly
+    'biweekly.title': '隔週返済計算機',
+    'biweekly.seoDesc':
+      '通常の月次返済と隔週返済（年26回 = 月次13回相当）を比較。短縮月数と利息削減額を算出します。',
+    'biweekly.fieldPrincipal': '借入額',
+    'biweekly.fieldRate': '金利 (年, %)',
+    'biweekly.fieldTerm': '期間（年）',
+    'biweekly.fieldCurrency': '通貨',
+    'biweekly.biweeklyPayment': '隔週返済額',
+    'biweekly.monthlyEquiv': '月次相当',
+    'biweekly.monthsSaved': '短縮月数',
+    'biweekly.interestSaved': '利息削減',
+    'biweekly.assumptions':
+      '隔週返済 = 年26回 = 月次13回相当（年1回追加）。銀行が手数料なしで隔週受付前提。',
+
+    // CAGR
+    'cagr.title': 'CAGR（年率複利成長率）計算機',
+    'cagr.seoDesc':
+      '投資の開始額・終了額・年数から年率複利成長率（CAGR）を算出。投資パフォーマンス比較に有用。',
+    'cagr.fieldBegin': '開始額',
+    'cagr.fieldEnd': '終了額',
+    'cagr.fieldYears': '年数',
+    'cagr.fieldCurrency': '通貨',
+    'cagr.resultLabel': 'CAGR',
+    'cagr.totalReturn': '通算リターン',
+    'cagr.absoluteGain': '絶対値の増減',
+    'cagr.years': '年',
+    'cagr.assumptions':
+      '純粋な CAGR 公式: (終了額 / 開始額)^(1/年数) − 1。期間中のキャッシュフローは考慮しません（その場合は IRR）。インフレ・税は含みません。',
+
+    // Savings Goal
+    'savings.title': '貯蓄目標計算機',
+    'savings.seoDesc':
+      '初期元本＋月次積立＋年利回りで、目標金額に到達するまでの期間を算出します。',
+    'savings.fieldTarget': '目標金額',
+    'savings.fieldPrincipal': '初期元本',
+    'savings.fieldContribution': '月次積立額',
+    'savings.fieldRate': '年利回り (%)',
+    'savings.fieldCurrency': '通貨',
+    'savings.resultYears': '到達までの期間',
+    'savings.years': '年',
+    'savings.resultMonths': '月数',
+    'savings.totalContrib': '総積立額',
+    'savings.totalInterest': '運用益',
+    'savings.unreachable': 'この入力では目標に到達しません。積立額または利回りを増やしてください。',
+    'savings.assumptions':
+      '月次複利、月末積立。インフレ・税・手数料は含みません — 実績は変動します。',
   },
 
   // ── Vietnamese ──
@@ -355,8 +623,15 @@ const translations = {
     'app.title': 'Calc Tools',
     'app.subtitle': 'CHẠY TRÊN TRÌNH DUYỆT · KHÔNG ĐĂNG KÝ · KHÔNG TẢI LÊN',
     'tabs.mortgage': 'Vay mua nhà',
+    'tabs.refinance': 'Tái cấp vốn',
+    'tabs.affordability': 'Khả năng vay',
+    'tabs.amortization': 'Lịch trả nợ',
+    'tabs.extra': 'Trả thêm',
+    'tabs.biweekly': '2 tuần / lần',
     'tabs.loan': 'Khoản vay',
     'tabs.compound': 'Lãi kép',
+    'tabs.cagr': 'CAGR',
+    'tabs.savings': 'Mục tiêu tiết kiệm',
     'nav.about': 'Giới thiệu',
     'nav.contact': 'Liên hệ',
     'common.loading': 'Đang tải…',
@@ -413,8 +688,15 @@ const translations = {
     'app.title': 'Calc Tools',
     'app.subtitle': 'BERJALAN DI BROWSER · TANPA DAFTAR · TANPA UNGGAH',
     'tabs.mortgage': 'KPR',
+    'tabs.refinance': 'Refinancing',
+    'tabs.affordability': 'Kemampuan',
+    'tabs.amortization': 'Jadwal',
+    'tabs.extra': 'Pelunasan',
+    'tabs.biweekly': '2 mingguan',
     'tabs.loan': 'Pinjaman',
     'tabs.compound': 'Bunga Majemuk',
+    'tabs.cagr': 'CAGR',
+    'tabs.savings': 'Target Tabungan',
     'nav.about': 'Tentang',
     'nav.contact': 'Kontak',
     'common.loading': 'Memuat…',
@@ -470,8 +752,15 @@ const translations = {
     'app.title': 'Calc Tools',
     'app.subtitle': '浏览器原生 · 无需注册 · 无需上传',
     'tabs.mortgage': '房贷',
+    'tabs.refinance': '再融资',
+    'tabs.affordability': '可贷额度',
+    'tabs.amortization': '还款计划',
+    'tabs.extra': '提前还款',
+    'tabs.biweekly': '半月还款',
     'tabs.loan': '贷款',
     'tabs.compound': '复利',
+    'tabs.cagr': 'CAGR',
+    'tabs.savings': '储蓄目标',
     'nav.about': '关于',
     'nav.contact': '联系',
     'common.loading': '加载中…',
