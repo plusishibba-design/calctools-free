@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { useLanguage } from '../LanguageContext';
 import { CURRENCIES, formatCurrency, calcMonthlyPayment, calcPayoff } from '../utils/finance';
+import FormattedInput from './inputs/FormattedInput';
 
 function ExtraPaymentMode() {
   const { t } = useLanguage();
@@ -34,23 +35,23 @@ function ExtraPaymentMode() {
       <form className="calc-form" onSubmit={(e) => e.preventDefault()}>
         <div className="calc-field">
           <label htmlFor="ex-principal">{t('extra.fieldPrincipal')}</label>
-          <input id="ex-principal" type="number" inputMode="decimal" min="0" step="1000"
-            value={principal} onChange={(e) => setPrincipal(e.target.value)} />
+          <FormattedInput id="ex-principal" prefix={cur.symbol}
+            value={principal} onChange={setPrincipal} />
         </div>
         <div className="calc-field">
           <label htmlFor="ex-rate">{t('extra.fieldRate')}</label>
-          <input id="ex-rate" type="number" inputMode="decimal" min="0" max="30" step="0.05"
-            value={rate} onChange={(e) => setRate(e.target.value)} />
+          <FormattedInput id="ex-rate" suffix="%" decimal
+            value={rate} onChange={setRate} />
         </div>
         <div className="calc-field">
           <label htmlFor="ex-years">{t('extra.fieldTerm')}</label>
-          <input id="ex-years" type="number" inputMode="numeric" min="1" max="50" step="1"
-            value={years} onChange={(e) => setYears(e.target.value)} />
+          <FormattedInput id="ex-years" suffix={t('unit.year')}
+            value={years} onChange={setYears} />
         </div>
         <div className="calc-field">
           <label htmlFor="ex-extra">{t('extra.fieldExtra')}</label>
-          <input id="ex-extra" type="number" inputMode="decimal" min="0" step="50"
-            value={extra} onChange={(e) => setExtra(e.target.value)} />
+          <FormattedInput id="ex-extra" prefix={cur.symbol}
+            value={extra} onChange={setExtra} />
         </div>
         <div className="calc-field full">
           <label htmlFor="ex-currency">{t('extra.fieldCurrency')}</label>

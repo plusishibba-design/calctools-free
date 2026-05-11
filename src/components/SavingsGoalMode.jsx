@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { useLanguage } from '../LanguageContext';
 import { CURRENCIES, formatCurrency, calcSavingsGoal } from '../utils/finance';
+import FormattedInput from './inputs/FormattedInput';
 
 function SavingsGoalMode() {
   const { t } = useLanguage();
@@ -29,23 +30,23 @@ function SavingsGoalMode() {
       <form className="calc-form" onSubmit={(e) => e.preventDefault()}>
         <div className="calc-field">
           <label htmlFor="sg-target">{t('savings.fieldTarget')}</label>
-          <input id="sg-target" type="number" inputMode="decimal" min="0" step="1000"
-            value={target} onChange={(e) => setTarget(e.target.value)} />
+          <FormattedInput id="sg-target" prefix={cur.symbol}
+            value={target} onChange={setTarget} />
         </div>
         <div className="calc-field">
           <label htmlFor="sg-principal">{t('savings.fieldPrincipal')}</label>
-          <input id="sg-principal" type="number" inputMode="decimal" min="0" step="500"
-            value={principal} onChange={(e) => setPrincipal(e.target.value)} />
+          <FormattedInput id="sg-principal" prefix={cur.symbol}
+            value={principal} onChange={setPrincipal} />
         </div>
         <div className="calc-field">
           <label htmlFor="sg-contribution">{t('savings.fieldContribution')}</label>
-          <input id="sg-contribution" type="number" inputMode="decimal" min="0" step="50"
-            value={contribution} onChange={(e) => setContribution(e.target.value)} />
+          <FormattedInput id="sg-contribution" prefix={cur.symbol}
+            value={contribution} onChange={setContribution} />
         </div>
         <div className="calc-field">
           <label htmlFor="sg-rate">{t('savings.fieldRate')}</label>
-          <input id="sg-rate" type="number" inputMode="decimal" min="0" max="30" step="0.1"
-            value={rate} onChange={(e) => setRate(e.target.value)} />
+          <FormattedInput id="sg-rate" suffix="%" decimal
+            value={rate} onChange={setRate} />
         </div>
         <div className="calc-field full">
           <label htmlFor="sg-currency">{t('savings.fieldCurrency')}</label>

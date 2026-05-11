@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { useLanguage } from '../LanguageContext';
 import { CURRENCIES, formatCurrency, calcMonthlyPayment } from '../utils/finance';
+import FormattedInput from './inputs/FormattedInput';
 
 function LoanMode() {
   const { t } = useLanguage();
@@ -26,43 +27,20 @@ function LoanMode() {
       <form className="calc-form" onSubmit={(e) => e.preventDefault()}>
         <div className="calc-field">
           <label htmlFor="l-principal">{t('loan.fieldPrincipal')}</label>
-          <input
-            id="l-principal"
-            type="number"
-            inputMode="decimal"
-            min="0"
-            step="500"
-            value={principal}
-            onChange={(e) => setPrincipal(e.target.value)}
-          />
+          <FormattedInput id="l-principal" prefix={cur.symbol}
+            value={principal} onChange={setPrincipal} />
         </div>
 
         <div className="calc-field">
           <label htmlFor="l-rate">{t('loan.fieldRate')}</label>
-          <input
-            id="l-rate"
-            type="number"
-            inputMode="decimal"
-            min="0"
-            max="40"
-            step="0.05"
-            value={rate}
-            onChange={(e) => setRate(e.target.value)}
-          />
+          <FormattedInput id="l-rate" suffix="%" decimal
+            value={rate} onChange={setRate} />
         </div>
 
         <div className="calc-field">
           <label htmlFor="l-years">{t('loan.fieldTerm')}</label>
-          <input
-            id="l-years"
-            type="number"
-            inputMode="numeric"
-            min="1"
-            max="30"
-            step="1"
-            value={years}
-            onChange={(e) => setYears(e.target.value)}
-          />
+          <FormattedInput id="l-years" suffix={t('unit.year')}
+            value={years} onChange={setYears} />
         </div>
 
         <div className="calc-field">

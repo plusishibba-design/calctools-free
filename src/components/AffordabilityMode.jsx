@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { useLanguage } from '../LanguageContext';
 import { CURRENCIES, formatCurrency, calcAffordability } from '../utils/finance';
+import FormattedInput from './inputs/FormattedInput';
 
 function AffordabilityMode() {
   const { t } = useLanguage();
@@ -30,33 +31,33 @@ function AffordabilityMode() {
       <form className="calc-form" onSubmit={(e) => e.preventDefault()}>
         <div className="calc-field">
           <label htmlFor="a-income">{t('affordability.fieldIncome')}</label>
-          <input id="a-income" type="number" inputMode="decimal" min="0" step="1000"
-            value={income} onChange={(e) => setIncome(e.target.value)} />
+          <FormattedInput id="a-income" prefix={cur.symbol}
+            value={income} onChange={setIncome} />
         </div>
         <div className="calc-field">
           <label htmlFor="a-debts">{t('affordability.fieldDebts')}</label>
-          <input id="a-debts" type="number" inputMode="decimal" min="0" step="50"
-            value={debts} onChange={(e) => setDebts(e.target.value)} />
+          <FormattedInput id="a-debts" prefix={cur.symbol}
+            value={debts} onChange={setDebts} />
         </div>
         <div className="calc-field">
           <label htmlFor="a-down">{t('affordability.fieldDownPayment')}</label>
-          <input id="a-down" type="number" inputMode="decimal" min="0" step="1000"
-            value={downPayment} onChange={(e) => setDownPayment(e.target.value)} />
+          <FormattedInput id="a-down" prefix={cur.symbol}
+            value={downPayment} onChange={setDownPayment} />
         </div>
         <div className="calc-field">
           <label htmlFor="a-rate">{t('affordability.fieldRate')}</label>
-          <input id="a-rate" type="number" inputMode="decimal" min="0" max="30" step="0.05"
-            value={rate} onChange={(e) => setRate(e.target.value)} />
+          <FormattedInput id="a-rate" suffix="%" decimal
+            value={rate} onChange={setRate} />
         </div>
         <div className="calc-field">
           <label htmlFor="a-years">{t('affordability.fieldTerm')}</label>
-          <input id="a-years" type="number" inputMode="numeric" min="1" max="50" step="1"
-            value={years} onChange={(e) => setYears(e.target.value)} />
+          <FormattedInput id="a-years" suffix={t('unit.year')}
+            value={years} onChange={setYears} />
         </div>
         <div className="calc-field">
           <label htmlFor="a-taxIns">{t('affordability.fieldTaxIns')}</label>
-          <input id="a-taxIns" type="number" inputMode="decimal" min="0" step="50"
-            value={taxIns} onChange={(e) => setTaxIns(e.target.value)} />
+          <FormattedInput id="a-taxIns" prefix={cur.symbol}
+            value={taxIns} onChange={setTaxIns} />
         </div>
         <div className="calc-field">
           <label htmlFor="a-currency">{t('affordability.fieldCurrency')}</label>

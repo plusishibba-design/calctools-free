@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { useLanguage } from '../LanguageContext';
 import { CURRENCIES, formatCurrency, calcFutureValue } from '../utils/finance';
+import FormattedInput from './inputs/FormattedInput';
 
 function CompoundMode() {
   const { t } = useLanguage();
@@ -28,56 +29,26 @@ function CompoundMode() {
       <form className="calc-form" onSubmit={(e) => e.preventDefault()}>
         <div className="calc-field">
           <label htmlFor="c-principal">{t('compound.fieldPrincipal')}</label>
-          <input
-            id="c-principal"
-            type="number"
-            inputMode="decimal"
-            min="0"
-            step="500"
-            value={principal}
-            onChange={(e) => setPrincipal(e.target.value)}
-          />
+          <FormattedInput id="c-principal" prefix={cur.symbol}
+            value={principal} onChange={setPrincipal} />
         </div>
 
         <div className="calc-field">
           <label htmlFor="c-contribution">{t('compound.fieldContribution')}</label>
-          <input
-            id="c-contribution"
-            type="number"
-            inputMode="decimal"
-            min="0"
-            step="50"
-            value={contribution}
-            onChange={(e) => setContribution(e.target.value)}
-          />
+          <FormattedInput id="c-contribution" prefix={cur.symbol}
+            value={contribution} onChange={setContribution} />
         </div>
 
         <div className="calc-field">
           <label htmlFor="c-rate">{t('compound.fieldRate')}</label>
-          <input
-            id="c-rate"
-            type="number"
-            inputMode="decimal"
-            min="0"
-            max="30"
-            step="0.1"
-            value={rate}
-            onChange={(e) => setRate(e.target.value)}
-          />
+          <FormattedInput id="c-rate" suffix="%" decimal
+            value={rate} onChange={setRate} />
         </div>
 
         <div className="calc-field">
           <label htmlFor="c-years">{t('compound.fieldYears')}</label>
-          <input
-            id="c-years"
-            type="number"
-            inputMode="numeric"
-            min="1"
-            max="80"
-            step="1"
-            value={years}
-            onChange={(e) => setYears(e.target.value)}
-          />
+          <FormattedInput id="c-years" suffix={t('unit.year')}
+            value={years} onChange={setYears} />
         </div>
 
         <div className="calc-field">

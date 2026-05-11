@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { useLanguage } from '../LanguageContext';
 import { CURRENCIES, formatCurrency, calcMonthlyPayment, calcPayoff } from '../utils/finance';
+import FormattedInput from './inputs/FormattedInput';
 
 function BiweeklyMode() {
   const { t } = useLanguage();
@@ -33,18 +34,18 @@ function BiweeklyMode() {
       <form className="calc-form" onSubmit={(e) => e.preventDefault()}>
         <div className="calc-field">
           <label htmlFor="bw-principal">{t('biweekly.fieldPrincipal')}</label>
-          <input id="bw-principal" type="number" inputMode="decimal" min="0" step="1000"
-            value={principal} onChange={(e) => setPrincipal(e.target.value)} />
+          <FormattedInput id="bw-principal" prefix={cur.symbol}
+            value={principal} onChange={setPrincipal} />
         </div>
         <div className="calc-field">
           <label htmlFor="bw-rate">{t('biweekly.fieldRate')}</label>
-          <input id="bw-rate" type="number" inputMode="decimal" min="0" max="30" step="0.05"
-            value={rate} onChange={(e) => setRate(e.target.value)} />
+          <FormattedInput id="bw-rate" suffix="%" decimal
+            value={rate} onChange={setRate} />
         </div>
         <div className="calc-field">
           <label htmlFor="bw-years">{t('biweekly.fieldTerm')}</label>
-          <input id="bw-years" type="number" inputMode="numeric" min="1" max="50" step="1"
-            value={years} onChange={(e) => setYears(e.target.value)} />
+          <FormattedInput id="bw-years" suffix={t('unit.year')}
+            value={years} onChange={setYears} />
         </div>
         <div className="calc-field">
           <label htmlFor="bw-currency">{t('biweekly.fieldCurrency')}</label>

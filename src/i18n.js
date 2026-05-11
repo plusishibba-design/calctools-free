@@ -6,6 +6,8 @@ const translations = {
   en: {
     'app.title': 'Calc Tools',
     'app.subtitle': 'BROWSER-NATIVE · NO SIGNUP · NO UPLOAD',
+    'unit.year': 'yr',
+    'unit.month': 'mo',
 
     'tabs.mortgage': 'Mortgage',
     'tabs.refinance': 'Refinance',
@@ -318,6 +320,8 @@ const translations = {
   ja: {
     'app.title': 'Calc Tools',
     'app.subtitle': 'ブラウザ完結 · 登録不要 · アップロード不要',
+    'unit.year': '年',
+    'unit.month': 'ヶ月',
 
     'tabs.mortgage': '住宅ローン',
     'tabs.refinance': '借換',
@@ -630,6 +634,8 @@ const translations = {
   vi: {
     'app.title': 'Calc Tools',
     'app.subtitle': 'CHẠY TRÊN TRÌNH DUYỆT · KHÔNG ĐĂNG KÝ · KHÔNG TẢI LÊN',
+    'unit.year': 'năm',
+    'unit.month': 'tháng',
     'tabs.mortgage': 'Vay mua nhà',
     'tabs.refinance': 'Tái cấp vốn',
     'tabs.affordability': 'Khả năng vay',
@@ -695,6 +701,8 @@ const translations = {
   id: {
     'app.title': 'Calc Tools',
     'app.subtitle': 'BERJALAN DI BROWSER · TANPA DAFTAR · TANPA UNGGAH',
+    'unit.year': 'thn',
+    'unit.month': 'bln',
     'tabs.mortgage': 'KPR',
     'tabs.refinance': 'Refinancing',
     'tabs.affordability': 'Kemampuan',
@@ -759,6 +767,8 @@ const translations = {
   zh: {
     'app.title': 'Calc Tools',
     'app.subtitle': '浏览器原生 · 无需注册 · 无需上传',
+    'unit.year': '年',
+    'unit.month': '月',
     'tabs.mortgage': '房贷',
     'tabs.refinance': '再融资',
     'tabs.affordability': '可贷额度',

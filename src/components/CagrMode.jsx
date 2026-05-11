@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { useLanguage } from '../LanguageContext';
 import { CURRENCIES, formatCurrency, formatPercent, calcCAGR } from '../utils/finance';
+import FormattedInput from './inputs/FormattedInput';
 
 function CagrMode() {
   const { t, lang } = useLanguage();
@@ -27,18 +28,18 @@ function CagrMode() {
       <form className="calc-form" onSubmit={(e) => e.preventDefault()}>
         <div className="calc-field">
           <label htmlFor="cg-begin">{t('cagr.fieldBegin')}</label>
-          <input id="cg-begin" type="number" inputMode="decimal" min="0" step="100"
-            value={beginValue} onChange={(e) => setBeginValue(e.target.value)} />
+          <FormattedInput id="cg-begin" prefix={cur.symbol}
+            value={beginValue} onChange={setBeginValue} />
         </div>
         <div className="calc-field">
           <label htmlFor="cg-end">{t('cagr.fieldEnd')}</label>
-          <input id="cg-end" type="number" inputMode="decimal" min="0" step="100"
-            value={endValue} onChange={(e) => setEndValue(e.target.value)} />
+          <FormattedInput id="cg-end" prefix={cur.symbol}
+            value={endValue} onChange={setEndValue} />
         </div>
         <div className="calc-field">
           <label htmlFor="cg-years">{t('cagr.fieldYears')}</label>
-          <input id="cg-years" type="number" inputMode="decimal" min="0.1" max="100" step="0.5"
-            value={years} onChange={(e) => setYears(e.target.value)} />
+          <FormattedInput id="cg-years" suffix={t('unit.year')} decimal
+            value={years} onChange={setYears} />
         </div>
         <div className="calc-field">
           <label htmlFor="cg-currency">{t('cagr.fieldCurrency')}</label>

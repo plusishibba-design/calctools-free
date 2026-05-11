@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { useLanguage } from '../LanguageContext';
 import { CURRENCIES, formatCurrency, calcMonthlyPayment } from '../utils/finance';
+import FormattedInput from './inputs/FormattedInput';
 
 function RefinanceMode() {
   const { t } = useLanguage();
@@ -38,33 +39,33 @@ function RefinanceMode() {
       <form className="calc-form" onSubmit={(e) => e.preventDefault()}>
         <div className="calc-field">
           <label htmlFor="r-balance">{t('refinance.fieldBalance')}</label>
-          <input id="r-balance" type="number" inputMode="decimal" min="0" step="1000"
-            value={currentBalance} onChange={(e) => setCurrentBalance(e.target.value)} />
+          <FormattedInput id="r-balance" prefix={cur.symbol}
+            value={currentBalance} onChange={setCurrentBalance} />
         </div>
         <div className="calc-field">
           <label htmlFor="r-currentRate">{t('refinance.fieldCurrentRate')}</label>
-          <input id="r-currentRate" type="number" inputMode="decimal" min="0" max="30" step="0.05"
-            value={currentRate} onChange={(e) => setCurrentRate(e.target.value)} />
+          <FormattedInput id="r-currentRate" suffix="%" decimal
+            value={currentRate} onChange={setCurrentRate} />
         </div>
         <div className="calc-field">
           <label htmlFor="r-remain">{t('refinance.fieldRemainYears')}</label>
-          <input id="r-remain" type="number" inputMode="numeric" min="1" max="50" step="1"
-            value={currentRemainYears} onChange={(e) => setCurrentRemainYears(e.target.value)} />
+          <FormattedInput id="r-remain" suffix={t('unit.year')}
+            value={currentRemainYears} onChange={setCurrentRemainYears} />
         </div>
         <div className="calc-field">
           <label htmlFor="r-newRate">{t('refinance.fieldNewRate')}</label>
-          <input id="r-newRate" type="number" inputMode="decimal" min="0" max="30" step="0.05"
-            value={newRate} onChange={(e) => setNewRate(e.target.value)} />
+          <FormattedInput id="r-newRate" suffix="%" decimal
+            value={newRate} onChange={setNewRate} />
         </div>
         <div className="calc-field">
           <label htmlFor="r-newYears">{t('refinance.fieldNewYears')}</label>
-          <input id="r-newYears" type="number" inputMode="numeric" min="1" max="50" step="1"
-            value={newYears} onChange={(e) => setNewYears(e.target.value)} />
+          <FormattedInput id="r-newYears" suffix={t('unit.year')}
+            value={newYears} onChange={setNewYears} />
         </div>
         <div className="calc-field">
           <label htmlFor="r-fees">{t('refinance.fieldClosingCosts')}</label>
-          <input id="r-fees" type="number" inputMode="decimal" min="0" step="500"
-            value={closingCosts} onChange={(e) => setClosingCosts(e.target.value)} />
+          <FormattedInput id="r-fees" prefix={cur.symbol}
+            value={closingCosts} onChange={setClosingCosts} />
         </div>
         <div className="calc-field">
           <label htmlFor="r-currency">{t('refinance.fieldCurrency')}</label>
